@@ -112,3 +112,16 @@ setInterval(function(){
 
 
 
+//Make nav fixed
+const nav = document.querySelector('.nav');
+
+window.addEventListener('scroll', function(){
+    navHeight = nav.getBoundingClientRect().height;
+    //console.log(navHeight);
+
+    if(pageYOffset > navHeight){
+       nav.classList.add('nav-fixed');
+    } else {
+        nav.classList.remove('nav-fixed');
+    }
+})
