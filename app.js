@@ -36,3 +36,79 @@ clickableCards.forEach(function(card){
     //only when scroll over will these items become visible
     //classlist.add() //no remove either
 })*/
+
+
+const slides = document.querySelectorAll('.slide');
+const frame = document.querySelector('.frame');
+let counter = 0;
+
+
+setInterval(function(){ 
+    counter++;
+    //console.log(counter);
+
+    frame.style.transform = `translateX(-${counter * 100}%)`;
+    if(counter > slides.length - 1 - 1){
+        counter = -1;
+    }
+
+    
+
+    
+}, 3000);
+
+
+const featuredShoeInfo = [
+
+    {
+        title: 'Nike Airmax Plus',
+        price: '$190',
+    },
+
+    {
+        title: 'Nike SB Burnt Sienna',
+        price: '$120',
+    },
+
+    {
+        title: 'Nike Pink Yellow Blue',
+        price: '$410',
+    },
+
+    {
+        title: 'Yeezy 700 Cement',
+        price: '$320',
+    },
+
+
+];
+
+
+
+const newReleaseTitle = document.querySelector('.new-release-title');
+const newReleasePrice = document.querySelector('.new-release-price');
+let currentRelease = 0;
+
+
+
+
+function updateFeaturedShoe(){
+    newReleaseTitle.textContent = featuredShoeInfo[currentRelease].title;
+    newReleasePrice.textContent = featuredShoeInfo[currentRelease].price;
+};
+
+updateFeaturedShoe(currentRelease);
+
+setInterval(function(){ 
+   currentRelease++;
+   //console.log(currentRelease)
+
+   updateFeaturedShoe(currentRelease);
+    if(currentRelease > featuredShoeInfo.length - 1 - 1){
+        currentRelease = -1;
+    }
+    
+}, 3000);
+
+
+
