@@ -299,9 +299,18 @@ body{
   .shop-section-grid{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    max-width: 85%;
     column-gap: 25px;
     row-gap: 35px;
     margin: 0 auto;
+}
+
+.new-release-grid{
+  grid-template-columns: 1fr;
+}
+
+.new-release-info{
+  padding: 1.2em 0;
 }
 }
 
