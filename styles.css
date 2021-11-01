@@ -159,6 +159,7 @@ body{
   flex-direction: column;
   justify-content: space-around;
   padding: 0 1.75em;
+  
 }
 
 .nav-fixed{
@@ -326,6 +327,7 @@ body{
    width: 100%;
    z-index: 999;
    box-shadow: 0px -5px 5px 0px rgba(0, 0, 0, 0.8);
+   border-bottom: 1px solid white;
   }
 
 
