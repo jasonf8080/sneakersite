@@ -340,6 +340,12 @@ body{
    background: rgba(0, 0, 0, 0.4);
   }
 
+  .nav-fixed{
+    position: fixed;
+    background: rgb(238, 238, 238);
+  }
+
+
 
 
 }
