@@ -339,6 +339,9 @@ body{
   body{
     font-size: 9px;
   }
+  .header{
+    height: 60vh;
+  }
 
   .shop-section-grid{
     column-gap: 20px;
