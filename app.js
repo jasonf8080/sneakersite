@@ -6,6 +6,7 @@ clickableCards.forEach(function(card){
     
     card.addEventListener('click', function(e){
         singleCard.classList.add('active');
+
         const img = e.target.parentElement.children[0].src;
         const title = e.target.parentElement.children[1].children[0].textContent;
 
@@ -18,12 +19,16 @@ clickableCards.forEach(function(card){
         <i class="lni lni-close"></i>
     </div>`;
 
+    document.body.style.overflow = 'hidden';
+    
+
 
         const exitBtn = document.querySelector('.selected-card i');
         console.log(exitBtn);
 
         exitBtn.addEventListener('click', function(e){
         singleCard.classList.remove('active');
+        document.body.style.overflow = 'auto';
         console.log(e.target);
     })
   
@@ -31,10 +36,13 @@ clickableCards.forEach(function(card){
 })//for each end
 
 
+
 /*window.addEventListener('scroll', function(){
     //only when scroll over will these items become visible
     //classlist.add() //no remove either
 })*/
+
+
 
 
 const slides = document.querySelectorAll('.slide');
