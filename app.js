@@ -5,6 +5,7 @@ const singleCard = document.querySelector('.card-clicked');
 clickableCards.forEach(function(card){
     
     card.addEventListener('click', function(e){
+        document.body.style.overflow = 'hidden';
         singleCard.classList.add('active');
 
         const img = e.target.parentElement.children[0].src;
@@ -18,9 +19,6 @@ clickableCards.forEach(function(card){
         </div>
         <i class="lni lni-close"></i>
     </div>`;
-
-    document.body.style.overflow = 'hidden';
-    
 
 
         const exitBtn = document.querySelector('.selected-card i');
