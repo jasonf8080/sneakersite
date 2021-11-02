@@ -6,7 +6,6 @@ clickableCards.forEach(function(card){
     
     card.addEventListener('click', function(e){
         singleCard.classList.add('active');
-
         const img = e.target.parentElement.children[0].src;
         const title = e.target.parentElement.children[1].children[0].textContent;
 
@@ -16,7 +15,7 @@ clickableCards.forEach(function(card){
             <h2>${title}</h2>
             <p>10.5</p>
         </div>
-        <i class="fas fa-times"></i>
+        <i class="lni lni-close"></i>
     </div>`;
 
 
