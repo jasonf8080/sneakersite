@@ -233,7 +233,7 @@ body{
 .shop-section-grid{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 25px;
+    column-gap: 1.6em;
     row-gap: 35px;
     max-width: 75%;
     margin: 0 auto;
@@ -324,6 +324,10 @@ body{
 
 }
 
+.selected-card{
+  max-width: 75%;
+}
+
 
 
 }
@@ -339,9 +343,7 @@ body{
     height: 60vh;
   }
 
-  .shop-section-grid{
-    column-gap: 20px;
-  }
+  
 
 
   .nav{
