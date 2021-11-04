@@ -21,6 +21,7 @@ clickableCards.forEach(function(card){
     </div>`;
 
 
+
         const exitBtn = document.querySelector('.selected-card i');
         console.log(exitBtn);
 
@@ -129,4 +130,24 @@ window.addEventListener('scroll', function(){
     } else {
         nav.classList.remove('nav-fixed');
     }
+})
+
+//show search bar
+
+const searchIcon = document.querySelector('.lni.lni-search.search-icon');
+const searchContainer = document.querySelector('.search-bar-container');
+const searchBar = document.querySelector('.search-bar');
+searchContainerHeight = searchContainer.getBoundingClientRect().height;
+console.log(searchContainerHeight);
+
+
+
+searchIcon.addEventListener('click', function(e){
+    //console.log(e.target);
+    
+
+    searchContainer.classList.toggle('active');
+    searchBar.classList.toggle('active');
+
+    console.log(searchContainerHeight);
 })
