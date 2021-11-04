@@ -181,7 +181,7 @@ body{
 
 
 .search-bar-container.active{
-  height: 90px;
+  height: 130px;
   transition: all 1s;
 }
 
@@ -208,7 +208,7 @@ body{
   background: transparent;
   padding: 1em 2%;
   border: 1px solid black;
-  font-size: 1em;
+  font-size: 1.25em;
   color: black;
   text-transform: uppercase;
   font-family: 'Bebas Neue', cursive;
@@ -224,11 +224,12 @@ body{
   border: 1px solid black;
   padding: 1em;
   background: black;
-  margin-left: 2px;
+  margin-left: 5px;
 }
 
 .search-btn i{
-  color: white
+  color: white;
+  font-size: 1.85em;
 }
 
 
