@@ -211,6 +211,9 @@ body{
   font-size: 1em;
   color: black;
   text-transform: uppercase;
+  font-family: 'Bebas Neue', cursive;
+  letter-spacing: 1px;
+  border-radius: 0px;
 }
 
 .search-bar input:focus{
