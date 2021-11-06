@@ -58,9 +58,10 @@ clickableCards.forEach(function(card){
             
             ;
 
-       
-
             cart.appendChild(cartItem);
+
+            const cartCount = document.querySelector('.cart-icon-container span');
+            cartCount.classList.add('active');
             
             
     
