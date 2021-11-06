@@ -11,17 +11,19 @@ clickableCards.forEach(function(card){
         const img = e.target.parentElement.children[0].src;
         const title = e.target.parentElement.children[1].children[0].textContent;
 
-        singleCard.innerHTML = `<div class="selected-card">
+        singleCard.innerHTML = `<div class="alert-div"><p>Item Added to Cart</p><i class="fas fa-check"></i></div>
+        <div class="selected-card">
         <img class="selected-img" src="${img}">
         <div class="info">
             <h2>${title}</h2>
             <p>10.5</p>
+            <button type="button" class="add-to-cart-btn">Add to Cart</button>
         </div>
         <i class="lni lni-close"></i>
     </div>`;
 
 
-
+        //exit card
         const exitBtn = document.querySelector('.selected-card i');
         console.log(exitBtn);
 
@@ -30,6 +32,40 @@ clickableCards.forEach(function(card){
         document.body.style.overflow = 'auto';
         console.log(e.target);
     })
+
+    //add to cart
+    const addToCartBtn = document.querySelector('.add-to-cart-btn');
+    const alertDiv = document.querySelector('.alert-div');
+
+    addToCartBtn.addEventListener('click', function(e){
+            alertDiv.style.visibility = 'visible';
+
+            const cart = document.querySelector('.shopping-cart');
+
+            cart.classList.add('active');
+            const cartItem = document.createElement('div');
+            cartItem.classList.add('shopping-cart-item');
+            cartItem.innerHTML = `<img src="${img}">
+
+            <h4>${title}</h4>
+
+            <div class="size-div">
+                <p>size:<span class="size">11</span></p>
+            </div>
+
+            <p class="cart-price">$480</p> 
+             <i class="lni lni-close"></i>`
+            
+            ;
+
+       
+
+            cart.appendChild(cartItem);
+            
+            
+    
+    });
+
   
     });//event listener end
 })//for each end
@@ -137,8 +173,8 @@ window.addEventListener('scroll', function(){
 const searchIcon = document.querySelector('.lni.lni-search.search-icon');
 const searchContainer = document.querySelector('.search-bar-container');
 const searchBar = document.querySelector('.search-bar');
-searchContainerHeight = searchContainer.getBoundingClientRect().height;
-console.log(searchContainerHeight);
+searchBarHeight = searchBar.getBoundingClientRect().height;
+console.log(searchBarHeight);
 
 
 
@@ -147,7 +183,16 @@ searchIcon.addEventListener('click', function(e){
     
 
     searchContainer.classList.toggle('active');
-    searchBar.classList.toggle('active');
 
-    console.log(searchContainerHeight);
+    if(searchContainer.classList.contains('active')){
+        searchContainer.style.height = `${searchBarHeight}px`;
+       
+        console.log(searchBarHeight);
+    } else {
+        searchContainer.style.height = `0px`;
+    }
+    
+
+   
 })
+
