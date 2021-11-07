@@ -1,6 +1,7 @@
 
 const clickableCards = document.querySelectorAll('.clickable-card');
 const singleCard = document.querySelector('.card-clicked');
+const cart = document.querySelector('.shopping-cart');
 
 clickableCards.forEach(function(card){
     
@@ -38,8 +39,7 @@ clickableCards.forEach(function(card){
     addToCartBtn.addEventListener('click', function(e){
             alertDiv.style.visibility = 'visible';
 
-            const cart = document.querySelector('.shopping-cart');
-
+           
             cart.classList.add('active');//display none -- to display flex/visible
             const cartItem = document.createElement('div');//create new item
             cartItem.classList.add('shopping-cart-item');
@@ -61,14 +61,14 @@ clickableCards.forEach(function(card){
             const cartCount = document.querySelector('.cart-icon-container span');
             cartCount.classList.add('active');
              //count cart items
-             addCartAmount();//js.91
-            
+            updateCartAmount();
 
             //remove from cart
             const removeCartBtns = document.querySelectorAll('.shopping-cart-item i');
             removeCartBtns.forEach(function(removeCartBtn){
                 removeCartBtn.addEventListener('click', function(e){
                     e.target.parentElement.remove();
+                    updateCartAmount();
 
 
                     if(cart.innerHTML === ''){//if cart is empty, no items within cart element, remove cart entirely
@@ -85,12 +85,18 @@ clickableCards.forEach(function(card){
     });//event listener end
 })//for each end
 
-let shopItems = 0;
 
-function addCartAmount(){
-    shopItems++;
+function updateCartAmount(){
     const cartCount = document.querySelector('.cart-icon-container span');
-    cartCount.textContent = shopItems;
+   const cartItems = document.querySelectorAll('.shopping-cart-item');
+
+   cartCount.textContent = cartItems.length;
+
+   if(cartItems.length === 0){
+        cartCount.style.visibility = 'hidden';
+   } else {
+    cartCount.style.visibility = 'visible';
+   }
 }
 
 
@@ -198,8 +204,6 @@ console.log(searchBarHeight);
 
 searchIcon.addEventListener('click', function(e){
     //console.log(e.target);
-    
-
     searchContainer.classList.toggle('active');
 
     if(searchContainer.classList.contains('active')){
@@ -209,8 +213,17 @@ searchIcon.addEventListener('click', function(e){
     } else {
         searchContainer.style.height = `0px`;
     }
+});
+
+
+const cartIcon = document.querySelector('.lni.lni-cart');
+
+cartIcon.addEventListener('click', function(){
     
-
-   
+    if(cart.innerHTML === ''){
+       const cartAlertDiv = document.querySelector('.cart-alert-div');
+        cartAlertDiv.style.visibility = 'visible';
+    } else {
+        cartAlertDiv.style.visibility = 'hidden';
+    }
 })
-
