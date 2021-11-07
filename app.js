@@ -25,14 +25,13 @@ clickableCards.forEach(function(card){
 
         //exit card
         const exitBtn = document.querySelector('.selected-card i');
-        console.log(exitBtn);
-
+       
         exitBtn.addEventListener('click', function(e){
-        singleCard.classList.remove('active');
-        document.body.style.overflow = 'auto';
+            singleCard.classList.remove('active');
+            document.body.style.overflow = 'auto';//back to normal
     })
 
-    //add to cart
+    //add an item to cart - from individual card
     const addToCartBtn = document.querySelector('.add-to-cart-btn');
     const alertDiv = document.querySelector('.alert-div');
 
@@ -41,8 +40,8 @@ clickableCards.forEach(function(card){
 
             const cart = document.querySelector('.shopping-cart');
 
-            cart.classList.add('active');
-            const cartItem = document.createElement('div');
+            cart.classList.add('active');//display none -- to display flex/visible
+            const cartItem = document.createElement('div');//create new item
             cartItem.classList.add('shopping-cart-item');
             cartItem.innerHTML = `<img src="${img}">
 
@@ -57,10 +56,13 @@ clickableCards.forEach(function(card){
             
             ;
 
-            cart.appendChild(cartItem);
+            cart.appendChild(cartItem);//add item to cart element - add list item to list
 
             const cartCount = document.querySelector('.cart-icon-container span');
             cartCount.classList.add('active');
+             //count cart items
+             addCartAmount();//js.91
+            
 
             //remove from cart
             const removeCartBtns = document.querySelectorAll('.shopping-cart-item i');
@@ -68,16 +70,14 @@ clickableCards.forEach(function(card){
                 removeCartBtn.addEventListener('click', function(e){
                     e.target.parentElement.remove();
 
-                    if(cart.innerHTML === ''){
-                        console.log('aaaa');
+
+                    if(cart.innerHTML === ''){//if cart is empty, no items within cart element, remove cart entirely
                         cart.classList.remove('active');
                     }
                 });
             });
 
-            //count cart items
-            showCartAmount();
-            
+           
     
     });
 
@@ -86,24 +86,18 @@ clickableCards.forEach(function(card){
 })//for each end
 
 let shopItems = 0;
-//const shopItemsElement = document.querySelector('.cart-icon-container span');
 
-
-function showCartAmount(){
+function addCartAmount(){
     shopItems++;
     const cartCount = document.querySelector('.cart-icon-container span');
-
     cartCount.textContent = shopItems;
 }
 
-/*window.addEventListener('scroll', function(){
-    //only when scroll over will these items become visible
-    //classlist.add() //no remove either
-})*/
 
 
 
 
+//new release slider
 const slides = document.querySelectorAll('.slide');
 const frame = document.querySelector('.frame');
 let counter = 0;
