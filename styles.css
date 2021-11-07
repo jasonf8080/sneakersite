@@ -273,9 +273,11 @@ body{
   position: absolute;
   top: 0%;
   transform: translateY(-50%);
-  right: -1em;
+  right: -0.5em;
   visibility: hidden;
   color: rgb(255, 203, 92);
+  font-size: 1.5em;
+  font-family: 'Bebas Neue', cursive;
   
 }
 
@@ -348,6 +350,7 @@ body{
   color: black;
   transform: translateX(40%);
   font-size: 0.8em;
+  cursor: pointer;
 }
 
 
@@ -535,7 +538,7 @@ body{
   }
 
   .shopping-cart-container{
-    font-size: 12px;
+    font-size: 13px;
   }
 
   .shopping-cart img{
@@ -546,6 +549,10 @@ body{
 
   .header{
     height: 60vh;
+  }
+
+  .shopping-cart-item{
+    width: 85%;
   }
 
   

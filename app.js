@@ -30,7 +30,6 @@ clickableCards.forEach(function(card){
         exitBtn.addEventListener('click', function(e){
         singleCard.classList.remove('active');
         document.body.style.overflow = 'auto';
-        console.log(e.target);
     })
 
     //add to cart
@@ -54,7 +53,7 @@ clickableCards.forEach(function(card){
             </div>
 
             <p class="cart-price">$480</p> 
-             <i class="lni lni-close"></i>`
+             <i class="lni lni-close remove-btn"></i>`
             
             ;
 
@@ -62,7 +61,22 @@ clickableCards.forEach(function(card){
 
             const cartCount = document.querySelector('.cart-icon-container span');
             cartCount.classList.add('active');
-            
+
+            //remove from cart
+            const removeCartBtns = document.querySelectorAll('.shopping-cart-item i');
+            removeCartBtns.forEach(function(removeCartBtn){
+                removeCartBtn.addEventListener('click', function(e){
+                    e.target.parentElement.remove();
+
+                    if(cart.innerHTML === ''){
+                        console.log('aaaa');
+                        cart.classList.remove('active');
+                    }
+                });
+            });
+
+            //count cart items
+            showCartAmount();
             
     
     });
@@ -71,7 +85,16 @@ clickableCards.forEach(function(card){
     });//event listener end
 })//for each end
 
+let shopItems = 0;
+//const shopItemsElement = document.querySelector('.cart-icon-container span');
 
+
+function showCartAmount(){
+    shopItems++;
+    const cartCount = document.querySelector('.cart-icon-container span');
+
+    cartCount.textContent = shopItems;
+}
 
 /*window.addEventListener('scroll', function(){
     //only when scroll over will these items become visible
