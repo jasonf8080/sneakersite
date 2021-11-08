@@ -1,10 +1,59 @@
+//Make nav fixed
+const nav = document.querySelector('.nav');
 
+window.addEventListener('scroll', function(){
+    navHeight = nav.getBoundingClientRect().height;
+    //console.log(navHeight);
+
+    if(pageYOffset > navHeight){
+       nav.classList.add('nav-fixed');
+    } else {
+        nav.classList.remove('nav-fixed');
+    }
+})
+
+//show search bar
+
+const searchIcon = document.querySelector('.lni.lni-search.search-icon');
+const searchContainer = document.querySelector('.search-bar-container');
+const searchBar = document.querySelector('.search-bar');
+searchBarHeight = searchBar.getBoundingClientRect().height;
+
+searchIcon.addEventListener('click', function(e){
+    //console.log(e.target);
+    searchContainer.classList.toggle('active');
+
+    if(searchContainer.classList.contains('active')){
+        searchContainer.style.height = `${searchBarHeight}px`;
+       
+        console.log(searchBarHeight);
+    } else {
+        searchContainer.style.height = `0px`;
+    }
+});
+
+//access cart
+const cartIcon = document.querySelector('.lni.lni-cart');
+cartIcon.addEventListener('click', function(){
+    
+    if(cart.innerHTML === ''){
+       const cartAlertDiv = document.querySelector('.cart-alert-div');
+        cartAlertDiv.style.visibility = 'visible';
+
+        setTimeout(function(){
+            cartAlertDiv.style.visibility = 'hidden';
+        }, 2000)
+    } else {
+        cartAlertDiv.style.visibility = 'hidden';
+    }
+})
+
+//select individual items
 const clickableCards = document.querySelectorAll('.clickable-card');
 const singleCard = document.querySelector('.card-clicked');
 const cart = document.querySelector('.shopping-cart');
 
 clickableCards.forEach(function(card){
-    
     card.addEventListener('click', function(e){
         document.body.style.overflow = 'hidden';
         singleCard.classList.add('active');
@@ -32,12 +81,16 @@ clickableCards.forEach(function(card){
             document.body.style.overflow = 'auto';//back to normal
     })
 
-    //add an item to cart - from individual card
+
+    //pt2 --add an item to cart - from individual card
     const addToCartBtn = document.querySelector('.add-to-cart-btn');
     const alertDiv = document.querySelector('.alert-div');
 
     addToCartBtn.addEventListener('click', function(e){
             alertDiv.style.visibility = 'visible';
+            setTimeout(function(){
+                alertDiv.style.visibility = 'hidden';
+            }, 2000)
 
            
             cart.classList.add('active');//display none -- to display flex/visible
@@ -98,10 +151,6 @@ function updateCartAmount(){
     cartCount.style.visibility = 'visible';
    }
 }
-
-
-
-
 
 //new release slider
 const slides = document.querySelectorAll('.slide');
@@ -177,53 +226,3 @@ setInterval(function(){
 }, 3000);
 
 
-
-//Make nav fixed
-const nav = document.querySelector('.nav');
-
-window.addEventListener('scroll', function(){
-    navHeight = nav.getBoundingClientRect().height;
-    //console.log(navHeight);
-
-    if(pageYOffset > navHeight){
-       nav.classList.add('nav-fixed');
-    } else {
-        nav.classList.remove('nav-fixed');
-    }
-})
-
-//show search bar
-
-const searchIcon = document.querySelector('.lni.lni-search.search-icon');
-const searchContainer = document.querySelector('.search-bar-container');
-const searchBar = document.querySelector('.search-bar');
-searchBarHeight = searchBar.getBoundingClientRect().height;
-console.log(searchBarHeight);
-
-
-
-searchIcon.addEventListener('click', function(e){
-    //console.log(e.target);
-    searchContainer.classList.toggle('active');
-
-    if(searchContainer.classList.contains('active')){
-        searchContainer.style.height = `${searchBarHeight}px`;
-       
-        console.log(searchBarHeight);
-    } else {
-        searchContainer.style.height = `0px`;
-    }
-});
-
-
-const cartIcon = document.querySelector('.lni.lni-cart');
-
-cartIcon.addEventListener('click', function(){
-    
-    if(cart.innerHTML === ''){
-       const cartAlertDiv = document.querySelector('.cart-alert-div');
-        cartAlertDiv.style.visibility = 'visible';
-    } else {
-        cartAlertDiv.style.visibility = 'hidden';
-    }
-})
