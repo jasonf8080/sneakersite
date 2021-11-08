@@ -222,9 +222,11 @@ body{
   height: 0px;
   overflow: hidden;
   transition: all 1s;
-  
 }
 
+.shopping-cart-container{
+  transition: all 1s;
+}
 
 
 .search-bar{
@@ -282,7 +284,7 @@ body{
   transform: translateY(-50%);
   right: -0.5em;
   visibility: hidden;
-  color: rgb(255, 203, 92);
+  color: rgb(255, 138, 92);
   font-size: 1.5em;
   font-family: 'Bebas Neue', cursive;
   

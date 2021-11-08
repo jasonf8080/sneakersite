@@ -13,7 +13,6 @@ window.addEventListener('scroll', function(){
 })
 
 //show search bar
-
 const searchIcon = document.querySelector('.lni.lni-search.search-icon');
 const searchContainer = document.querySelector('.search-bar-container');
 const searchBar = document.querySelector('.search-bar');
@@ -42,10 +41,8 @@ cartIcon.addEventListener('click', function(){
 
         setTimeout(function(){
             cartAlertDiv.style.visibility = 'hidden';
-        }, 2000)
-    } else {
-        cartAlertDiv.style.visibility = 'hidden';
-    }
+        }, 1000)
+    } 
 })
 
 //select individual items
@@ -90,7 +87,7 @@ clickableCards.forEach(function(card){
             alertDiv.style.visibility = 'visible';
             setTimeout(function(){
                 alertDiv.style.visibility = 'hidden';
-            }, 2000)
+            }, 1000)
 
            
             cart.classList.add('active');//display none -- to display flex/visible
@@ -106,8 +103,23 @@ clickableCards.forEach(function(card){
 
             <p class="cart-price">$480</p> 
              <i class="lni lni-close remove-btn"></i>`
-            
             ;
+
+            cartIcon.classList.add('show-cart-height');
+
+            cartIcon.addEventListener('click', function(){
+                const cartHeight = cart.getBoundingClientRect().height;
+                const cartContainer = document.querySelector('.shopping-cart-container');
+
+                cartIcon.classList.toggle('show-cart-height');
+
+                if(cartIcon.classList.contains('show-cart-height')){
+                    cartContainer.style.height = `${cartHeight}px`;
+                } else {
+                    cartContainer.style.height = '0px';
+                    cartContainer.style.overflow = 'hidden';
+                }
+            })
 
             cart.appendChild(cartItem);//add item to cart element - add list item to list
 
