@@ -34,15 +34,15 @@ searchIcon.addEventListener('click', function(e){
 //access cart
 const cartIcon = document.querySelector('.lni.lni-cart');
 cartIcon.addEventListener('click', function(){
-    
     if(cart.innerHTML === ''){
        const cartAlertDiv = document.querySelector('.cart-alert-div');
         cartAlertDiv.style.visibility = 'visible';
+       
 
         setTimeout(function(){
             cartAlertDiv.style.visibility = 'hidden';
         }, 1000)
-    } 
+    }   
 })
 
 //select individual items
@@ -105,21 +105,15 @@ clickableCards.forEach(function(card){
              <i class="lni lni-close remove-btn"></i>`
             ;
 
-            cartIcon.classList.add('show-cart-height');
-
+           //toggle cart height -- after item is added
             cartIcon.addEventListener('click', function(){
-                const cartHeight = cart.getBoundingClientRect().height;
-                const cartContainer = document.querySelector('.shopping-cart-container');
+                cart.classList.toggle('active');
 
-                cartIcon.classList.toggle('show-cart-height');
 
-                if(cartIcon.classList.contains('show-cart-height')){
-                    cartContainer.style.height = `${cartHeight}px`;
-                } else {
-                    cartContainer.style.height = '0px';
-                    cartContainer.style.overflow = 'hidden';
-                }
-            })
+            });
+
+            
+         
 
             cart.appendChild(cartItem);//add item to cart element - add list item to list
 
@@ -138,6 +132,7 @@ clickableCards.forEach(function(card){
 
                     if(cart.innerHTML === ''){//if cart is empty, no items within cart element, remove cart entirely
                         cart.classList.remove('active');
+                        cart.style.padding = '0px';
                     }
                 });
             });
