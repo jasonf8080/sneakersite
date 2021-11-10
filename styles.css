@@ -615,7 +615,9 @@ body{
   max-width: 75%;
 }
 
-
+.shop-section-grid2{
+  display: none;
+}
 
 }
 
