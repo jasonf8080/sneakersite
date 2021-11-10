@@ -546,6 +546,10 @@ body{
   animation-iteration-count: 3;
 }
 
+.shop-section-grid2{
+  display: none;
+}
+
 
 
 @keyframes rotateLoader {
