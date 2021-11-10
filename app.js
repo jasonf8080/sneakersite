@@ -77,6 +77,10 @@ clickableCards.forEach(function(card){
             singleCard.classList.remove('active');
             document.body.style.overflow = 'auto';//back to normal
     })
+    
+
+
+
 
 
     //pt2 --add an item to cart - from individual card
@@ -107,8 +111,13 @@ clickableCards.forEach(function(card){
 
            //toggle cart height -- after item is added
             cartIcon.addEventListener('click', function(){
-                cart.classList.toggle('active');
-
+               
+                if(cart.classList.contains('active')){
+                    cart.classList.remove('active');
+                    //solves the padding issue cart.style.padding = '0px';
+                } else {
+                    cart.classList.add('active');
+                }
 
             });
 
@@ -129,10 +138,8 @@ clickableCards.forEach(function(card){
                     e.target.parentElement.remove();
                     updateCartAmount();
 
-
-                    if(cart.innerHTML === ''){//if cart is empty, no items within cart element, remove cart entirely
+                    if(cart.innerHTML === ''){
                         cart.classList.remove('active');
-                        cart.style.padding = '0px';
                     }
                 });
             });
@@ -233,3 +240,214 @@ setInterval(function(){
 }, 3000);
 
 
+const viewMoreBtn = document.querySelector('.view-more-btn');
+const loaderContainer = document.querySelector('.loader-container');
+const loader = document.querySelector('.loader-container i');
+const shopSection = document.querySelector('.shop-section');
+
+viewMoreBtn.addEventListener('click', function(e){
+    e.target.parentElement.remove();
+    loaderContainer.classList.add('active');
+
+    const firstShopSection = document.querySelector('.shop-section-grid');
+    firstShopSection.style.marginbottom = '0px';
+
+    setTimeout(function(){
+        loaderContainer.classList.remove('active');
+    }, 2400)
+
+    const moreItemsGrid = document.createElement('div');
+    moreItemsGrid.classList.add('shop-section-grid');
+   
+    setTimeout(function(){
+        shopSection.appendChild(moreItemsGrid);
+    }, 2400)
+
+
+    moreItemsGrid.innerHTML = `<div class="card">
+        <img class="img" src="sneaker-img26.png">
+        <div class="info">
+            <h2>Air Force One Black</h2>
+            <p>10.5</p>
+        </div>
+
+        <div class="clickable-card"></div>
+    </div>
+
+    <div class="card">
+        <img class="img" src="sneaker-img27.png">
+        <div class="info">
+            <h2>Off White Zoom Vaporfly</h2>
+            <p>10.5</p>
+        </div>
+
+        <div class="clickable-card"></div>
+    </div>
+
+    <div class="card">
+        <img class="img" src="sneaker-img28.png">
+        <div class="info">
+            <h2>Air Max Game Royal</h2>
+            <p>10.5</p>
+        </div>
+
+        <div class="clickable-card"></div>
+    </div>
+
+    <div class="card">
+        <img class="img" src="sneaker-img4.png">
+        <div class="info">
+            <h2>Jordan Backboard 1</h2>
+            <p>10.5</p>
+        </div>
+
+        <div class="clickable-card"></div>
+    </div>
+
+    <div class="card">
+        <img class="img" src="sneaker-img5.png">
+        <div class="info">
+            <h2>Yeezy 350</h2>
+            <p>10.5</p>
+        </div>
+
+        <div class="clickable-card"></div>
+    </div>
+
+
+    <div class="card">
+        <img class="img" src="sneaker-img6.png">
+        <div class="info">
+            <h2>Off White Air Force 1</h2>
+            <p>10.5</p>
+        </div>
+
+        <div class="clickable-card"></div>
+    </div>
+
+
+    <div class="card">
+        <img class="img" src="sneaker-img7.png">
+        <div class="info">
+            <h2>Nike Vapormax</h2>
+            <p>10.5</p>
+        </div>
+
+        <div class="clickable-card"></div>
+    </div>
+
+    <div class="card">
+        <img class="img" src="sneaker-img8.png">
+        <div class="info">
+            <h2>Jordan 1 Yellow</h2>
+            <p>10.5</p>
+        </div>
+
+        <div class="clickable-card"></div>
+    </div>
+
+    <div class="card">
+        <img class="img" src="sneaker-img24.png">
+        <div class="info">
+            <h2>Yeezy Desert Sage</h2>
+            <p>10.5</p>
+        </div>
+
+        <div class="clickable-card"></div>
+    </div>
+
+    <div class="card">
+        <img class="img" src="sneaker-img15.png">
+        <div class="info">
+            <h2>Yeezy 700 Cement</h2>
+            <p>10.5</p>
+        </div>
+
+        <div class="clickable-card"></div>
+    </div>
+
+
+    <div class="card">
+        <img class="img" src="sneaker-img11.png">
+        <div class="info">
+            <h2>Jordan 11 Concord</h2>
+            <p>10.5</p>
+        </div>
+
+        <div class="clickable-card"></div>
+    </div>
+
+
+    <div class="card">
+        <img class="img" src="sneaker-img12.png">
+        <div class="info">
+            <h2>Off White Airmax 90</h2>
+            <p>10.5</p>
+        </div>
+
+        <div class="clickable-card"></div>
+    </div>
+
+    <div class="card">
+        <img class="img" src="sneaker-img13.png">
+        <div class="info">
+            <h2>Fear of God Vans</h2>
+            <p>10.5</p>
+        </div>
+
+        <div class="clickable-card"></div>
+    </div>
+
+    <div class="card">
+        <img class="img" src="sneaker-img14.png">
+        <div class="info">
+            <h2>Airmax Sean Wotherspoon</h2>
+            <p>10.5</p>
+        </div>
+
+        <div class="clickable-card"></div>
+    </div>
+
+    <div class="card">
+        <img class="img" src="sneaker-img10.png">
+        <div class="info">
+            <h2>Yeezy 350</h2>
+            <p>10.5</p>
+        </div>
+
+        <div class="clickable-card"></div>
+    </div>
+
+
+
+    <div class="card">
+        <img class="img" src="sneaker-img9.png">
+        <div class="info">
+            <h2>Yeezy Slide</h2>
+            <p>10.5</p>
+        </div>
+
+        <div class="clickable-card"></div>
+    </div>
+
+    <div class="card">
+        <img class="img" src="sneaker-img19.png">
+        <div class="info">
+            <h2>Air Max Plus 3</h2>
+            <p>10.5</p>
+        </div>
+
+        <div class="clickable-card"></div>
+    </div>
+
+    <div class="card">
+        <img class="img" src="sneaker-img20.png">
+        <div class="info">
+            <h2>NMD R1 Original</h2>
+            <p>10.5</p>
+        </div>
+
+        <div class="clickable-card"></div>
+    </div>
+`
+})

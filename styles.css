@@ -455,6 +455,7 @@ body{
     row-gap: 2.2em;
     max-width: 75%;
     margin: 0 auto;
+    margin-bottom: 2.2em;
 }
 
 .card{
@@ -499,6 +500,64 @@ body{
   border-radius: 0.25em;
  
 }
+
+.btn-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5em;
+}
+
+.view-more-btn{
+  font-family: 'Bebas Neue', cursive;
+  background: black;
+  color: white;
+  font-size: 1.5em;
+  padding: 0.75em 2.5em;
+  letter-spacing: 1px;
+  border-radius: 1.5em;
+  border: none;
+  cursor: pointer;
+  margin-top: 2em;
+}
+
+.loader-container{
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 2em 0;
+}
+
+
+.loader-container i{
+  font-size: 5em;
+  color: #000;
+}
+
+.loader-container.active{
+  display: flex;
+
+}
+
+.loader-container.active.loader-container i{
+  animation: rotateLoader ease 0.8s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 3;
+}
+
+
+
+@keyframes rotateLoader {
+  0%{
+    transform: rotate(0deg);
+  }
+
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
 
 
 @media(max-width: 1024px){
@@ -582,7 +641,9 @@ body{
     width: 85%;
   }
 
-  
+  .shop-section-grid{
+    margin-bottom: 2.2em;
+  }
 
 
   .nav{
