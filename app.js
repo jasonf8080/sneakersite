@@ -1,3 +1,23 @@
+//giveaway
+const exitGiveawayBtn = document.querySelector('.exit-giveaway i');
+const giveawayContainer = document.querySelector('.giveaway-container');
+
+
+setTimeout(function(){
+    giveawayContainer.style.opacity = '1';
+}, 2500)
+
+exitGiveawayBtn.addEventListener('click', function(e){
+    const giveawayContainer = document.querySelector('.giveaway-container');
+    giveawayContainer.style.opacity = '0';
+    
+    document.body.style.overflow = 'auto';
+
+    setTimeout(function(){
+        giveawayContainer.remove();
+    }, 1500)
+});
+
 //Make nav fixed
 const nav = document.querySelector('.nav');
 
@@ -77,6 +97,11 @@ clickableCards.forEach(function(card){
             singleCard.classList.remove('active');
             document.body.style.overflow = 'auto';//back to normal
     })
+
+
+    const cards = document.querySelectorAll('.card');
+    console.log(cards);
+    
     
 
 
@@ -109,6 +134,7 @@ clickableCards.forEach(function(card){
              <i class="lni lni-close remove-btn"></i>`
             ;
 
+
            //toggle cart height -- after item is added
             cartIcon.addEventListener('click', function(){
                
@@ -118,6 +144,7 @@ clickableCards.forEach(function(card){
                 } else {
                     cart.classList.add('active');
                 }
+
 
             });
 
@@ -153,16 +180,23 @@ clickableCards.forEach(function(card){
 })//for each end
 
 
+const headerContent = document.querySelector('.header-content');
+
+
 function updateCartAmount(){
     const cartCount = document.querySelector('.cart-icon-container span');
-   const cartItems = document.querySelectorAll('.shopping-cart-item');
+    const cartItems = document.querySelectorAll('.shopping-cart-item');
+    const headerContent = document.querySelector('.header-content');
 
    cartCount.textContent = cartItems.length;
 
+
    if(cartItems.length === 0){
         cartCount.style.visibility = 'hidden';
+        headerContent.style.visibility = 'visible';
    } else {
     cartCount.style.visibility = 'visible';
+    headerContent.style.visibility = 'hidden';
    }
 }
 
@@ -195,7 +229,7 @@ const featuredShoeInfo = [
     },
 
     {
-        title: 'Nike SB Burnt Sienna',
+        title: 'Jordan 1 Off White',
         price: '$120',
     },
 
@@ -219,14 +253,14 @@ const newReleasePrice = document.querySelector('.new-release-price');
 let currentRelease = 0;
 
 
-
-
 function updateFeaturedShoe(){
     newReleaseTitle.textContent = featuredShoeInfo[currentRelease].title;
     newReleasePrice.textContent = featuredShoeInfo[currentRelease].price;
 };
 
 updateFeaturedShoe(currentRelease);
+
+
 
 setInterval(function(){ 
    currentRelease++;
@@ -236,8 +270,51 @@ setInterval(function(){
     if(currentRelease > featuredShoeInfo.length - 1 - 1){
         currentRelease = -1;
     }
+
+    
+    //console.log(selectedDot);
+
+   /* dots.forEach(function(dot){
+       dot.innerHTML = '<i class="fas fa-circle">';
+     
+
+       //selectedDot.innerHTML = '><i class="far fa-circle"></i>';
+
+
+    })
+*/
+    
+changeCurrentDot();
+
     
 }, 3000);
+
+const dots = document.querySelectorAll('.dots div');
+let currentDot = 0;
+
+document.addEventListener('DOMContentLoaded', function(){
+    changeCurrentDot(currentDot);
+})
+
+function changeCurrentDot(){
+    let selectedDot = dots[currentDot];
+    currentDot++;
+   
+    
+    if(currentDot > 3){
+        currentDot = 0;
+        console.log(currentDot);
+    }
+    
+
+
+    dots.forEach(function(dot){
+        dot.innerHTML = '<i class="fas fa-circle">';
+        selectedDot.innerHTML = '<i class="far fa-circle">';
+    }) 
+}
+
+
 
 
 const viewMoreBtn = document.querySelector('.view-more-btn');
@@ -262,4 +339,33 @@ viewMoreBtn.addEventListener('click', function(e){
         nextShopSection.style.display = 'grid';
     }, 2400)
 
+    
+
 })
+
+const backToTopBtn = document.querySelector('.back-to-top-btn');
+
+window.addEventListener('scroll', function(){
+    if(pageYOffset > 3300){
+        backToTopBtn.classList.add('active');
+    } else {
+        backToTopBtn.classList.remove('active');
+    };
+})
+
+
+
+
+//show upcoming releases
+
+/*window.addEventListener('scroll', function(){
+   const newReleases = document.querySelectorAll('.upcoming-release-item');
+
+   if(pageYOffset > 3400){
+    console.log(pageXOffset);
+    newReleases.forEach(function(newRelease){
+        newRelease.style.opacity = '1';
+    }) 
+}
+  
+})*/
