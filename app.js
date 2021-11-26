@@ -4,9 +4,11 @@ const giveawayContainer = document.querySelector('.giveaway-container');
 
 
 setTimeout(function(){
+    //initally 0
     giveawayContainer.style.opacity = '1';
 }, 2500)
 
+//giveaway has been loaded
 exitGiveawayBtn.addEventListener('click', function(e){
     const giveawayContainer = document.querySelector('.giveaway-container');
     giveawayContainer.style.opacity = '0';
@@ -15,7 +17,7 @@ exitGiveawayBtn.addEventListener('click', function(e){
 
     setTimeout(function(){
         giveawayContainer.remove();
-    }, 1500)
+    }, 800)
 });
 
 //Make nav fixed
@@ -69,38 +71,82 @@ cartIcon.addEventListener('click', function(){
 const clickableCards = document.querySelectorAll('.clickable-card');
 const singleCard = document.querySelector('.card-clicked');
 const cart = document.querySelector('.shopping-cart');
+const selectedSneaker = document.querySelector('.selected-sneaker');
+
+
 
 clickableCards.forEach(function(card){
     card.addEventListener('click', function(e){
-        document.body.style.overflow = 'hidden';
-        singleCard.classList.add('active');
+        
 
         const img = e.target.parentElement.children[0].src;
         const title = e.target.parentElement.children[1].children[0].textContent;
+        
+        selectedSneaker.classList.add('selected-sneaker');
 
-        singleCard.innerHTML = `<div class="alert-div"><p>Item Added to Cart</p><i class="fas fa-check"></i></div>
-        <div class="selected-card">
-        <img class="selected-img" src="${img}">
-        <div class="info">
-            <h2>${title}</h2>
-            <p>10.5</p>
+        selectedSneaker.innerHTML = `
+<div class="back-container">
+    <i class="fas fa-arrow-left"></i>
+
+    <div class="alert-div">
+    <p>ITEM ADDED TO CART</p>
+</div>
+
+</div>
+
+
+<div class="image-info-flex">
+    <img src="${img}">
+    
+    <div class="shoe-info-container">
+        <div class="shoe-info">
+            <h2 class="sneaker-title">${title}</h2>
+            <div class="ratings">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>         
+            </div>
+            <h2 class="price">$<span>120.00</span></h2>
+            <div class="sizes-container">
+                <select id="sizes">
+                    <option value="none"></option>
+                    <option value="8.0">8</option>
+                    <option value="8.0">8.5</option>
+                    <option value="8.0">9</option>
+                    <option value="8.0">9.5</option>
+                    <option value="8.0">10</option>
+                    <option value="8.0">10.5</option>
+                    <option value="8.0">11</option>
+                </select>
+                <span>PLEASE SELECT A SIZE</span>
+            </div> 
+            
+            <div class="shipping">
+                <i class="fas fa-truck"></i>
+                <p>Arrives within 5-6 business days</p>
+            </div>
+
             <button type="button" class="add-to-cart-btn">Add to Cart</button>
         </div>
-        <i class="lni lni-close"></i>
-    </div>`;
+    </div>
+</div>
+`;
+
+        selectedSneaker.style.transform = 'translateX(100%)';
+        
 
 
         //exit card
-        const exitBtn = document.querySelector('.selected-card i');
+        const goBackBtn = document.querySelector('.back-container i');
        
-        exitBtn.addEventListener('click', function(e){
-            singleCard.classList.remove('active');
-            document.body.style.overflow = 'auto';//back to normal
-    })
+        goBackBtn.addEventListener('click', function(e){
+            selectedSneaker.style.transform = 'translateX(-100%)';
+       })
 
 
-    const cards = document.querySelectorAll('.card');
-    console.log(cards);
+    
     
     
 
@@ -215,9 +261,6 @@ setInterval(function(){
         counter = -1;
     }
 
-    
-
-    
 }, 3000);
 
 
@@ -323,21 +366,21 @@ const loader = document.querySelector('.loader-container i');
 
 
 viewMoreBtn.addEventListener('click', function(e){
-    e.target.parentElement.remove();
-    loaderContainer.classList.add('active');
+    e.target.parentElement.remove();//removing the btn-container
+    loaderContainer.classList.add('active');//display loader
 
     const firstShopSection = document.querySelector('.shop-section-grid');
     firstShopSection.style.marginbottom = '0px';
 
     setTimeout(function(){
         loaderContainer.classList.remove('active');
-    }, 2400)
+    }, 2400) //after 2.4 seconds remove loader animation
 
     const nextShopSection = document.querySelector('.shop-section-grid2');
    
     setTimeout(function(){
         nextShopSection.style.display = 'grid';
-    }, 2400)
+    }, 2400) //unhide the hidden section
 
     
 

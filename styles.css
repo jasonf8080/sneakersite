@@ -63,7 +63,8 @@
   
 /*giveaway*/
 body{
-  overflow: hidden;
+  overflow: hidden;/*giveaway load*/
+  position: relative;
 }
 
 .giveaway-container{
@@ -102,11 +103,7 @@ body{
   height: auto;
 }
 
-.countdown{
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+.countdown{ 
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -123,7 +120,7 @@ body{
   align-items: center;
   background: black;
   color: white;
-  padding: 0.6em 0;
+ padding: 0.5em 0;
  
 }
 
@@ -135,7 +132,7 @@ body{
 
 
 .countdown-item h4{
-  font-size: 1.4em;
+  font-size: 1.2em;
 }
 
 
@@ -203,7 +200,7 @@ body{
 
 
 .alert-div{
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   background: rgb(54, 189, 110);
@@ -211,14 +208,14 @@ body{
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 1em 0;
+  padding: 1.5em 0;
  visibility: hidden;
 }
 
 .alert-div p, .alert-div i{
   text-transform: uppercase;
   color: white;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   letter-spacing: 1px;
   margin-right: 6px;
 }
@@ -248,31 +245,110 @@ body{
   cursor: pointer;
 }
 
+
+.selected-sneaker{
+  overflow: auto;
+  background: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  left: -100%;
+  z-index: 999;
+  transition: 0.5s;
+}
+
+.back-container{
+  background: black;
+  padding: 1.2em;
+  position: relative;
+}
+
+.back-container i{
+  color: white;
+  margin-left: 1.5em;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+.image-info-flex{
+  max-width: 85%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  column-gap: 1.2em;
+  margin-top: 4em;
+}
+
+.image-info-flex img{
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+}
+
+.shoe-info-container{
+  display: flex;
+  justify-content: center;
+  
+}
+
+.shoe-info{
+  margin-left: 2em;
+  width: 100%;
+}
+
+.sneaker-title{
+  font-size: 3em;
+}
+
+.ratings{
+  margin-bottom: 1.3em;
+}
+
+.ratings > *{
+  color: rgb(255, 174, 0);
+  font-size: 2em;
+}
+
+.sizes-container{
+  margin: 1.4em 0;
+
+}
+
+.shipping{
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  padding: 1em;
+  margin: 1.8em 0;
+}
+
+.shipping i{
+  font-size: 1.6em;
+  margin-right: 1em;
+ 
+}
+
+.shipping p{
+  font-size: 1.2em;
+  letter-spacing: 1px;
+}
+
 .add-to-cart-btn{
+  background: black;
   text-transform: uppercase;
   padding: 0.5em 1.5em;
-  margin: 0.8em 0;
-  background: transparent;
   color: white;
-  border-radius: 0.8em;
-  border: 1px solid white;
+  border: none;
+  border-radius: 2px;
   font-family: 'Bebas Neue', cursive;
   letter-spacing: 1px;
   font-size: 1.2em;
   cursor: pointer;
 }
 
-.add-to-cart-btn:hover{
-  background: white;
-  color: black;
-}
-
-
-
-
-
-
-/*Acual Site CSS*/
+/*Acual Site CSS//////////////////////////////////////////////////*/
 body{
   position: relative;
   font-size: 16px;
@@ -333,11 +409,30 @@ body{
   padding: 0.5em 0;
   text-align: center;
   position: relative;
+  z-index: 99;
+  cursor: pointer;
 }
 
 .header-btn::after{
   content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0px;
+  background: white;
+  transition:  all 0.5s;
+  z-index: -1;
 }
+
+.header-btn:hover{
+  color: black;
+}
+
+.header-btn:hover::after{
+  width: 100%;
+}
+
 
 
 
@@ -627,16 +722,15 @@ body{
 }
 
 .card{
-    border-radius: 0.25em;
     display: flex;
     flex-direction: column;
     align-items: center;
     background: black;
     max-width: 100%;
     color: white;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     position: relative;
+    transition: transform 0.4s;
     /*opacity: 0;*/
 }
 
@@ -649,8 +743,7 @@ body{
     max-width: 100%;
     min-width: 100%;
     height: auto;
-    border-top-right-radius: 0.25em;
-    border-top-left-radius: 0.25em;
+    
 }
 
 .info{
@@ -665,8 +758,11 @@ body{
   height: 100%;
   width: 100%;
   background: transparent;
-  border-radius: 0.25em;
- 
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.205);
+}
+
+.card:hover{
+  transform: scale(1.05);
 }
 
 .btn-container{
@@ -683,7 +779,7 @@ body{
   font-size: 1.5em;
   padding: 0.75em 2.5em;
   letter-spacing: 1px;
-  border-radius: 1.5em;
+  border-radius: 0.2em;
   border: none;
   cursor: pointer;
   margin-top: 2em;
@@ -841,8 +937,9 @@ body{
 @media(max-width: 768px){
 
   .giveaway{
-    max-width: 60%;
+    max-width: 65%;
   }
+
 
   .shop-section-grid{
     display: grid;
@@ -850,6 +947,18 @@ body{
     max-width: 85%;
     row-gap: 35px;
     margin: 0 auto;
+}
+
+
+.image-info-flex{
+  max-width: 85%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 1.2em;
+  row-gap: 2.4em;
+  margin-top: 4em;
+  margin-bottom: 4em;
 }
 
 .new-release-grid{

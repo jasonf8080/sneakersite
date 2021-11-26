@@ -11,9 +11,9 @@
 </head>
 <body>
 
-    <div class="giveaway-container"><!--hide for now-->
+    <div class="giveaway-container">
         <div class="giveaway">
-            <div class="countdown"><!--position: absolute-->
+            <div class="countdown">
                 <div class="countdown-item">
                     <h4>35</h4>
                     <p>DAYS</p>
@@ -135,15 +135,51 @@
         </div>
     </section>
 
-    <div class="card-clicked"><!--whole body-->
-        <div class="selected-card"><!--card only-->
-            <img class="selected-img" src="sneaker-img1.png">
-            <div class="info">
-                <h2>Nike Air Force One</h2>
-                <p>10.5</p>
-            </div>
-            <i class="fas fa-times"></i>
+    <div class="selected-sneaker">
+        <div class="back-container">
+            <i class="fas fa-arrow-left"></i>
         </div>
+    
+        <div class="image-info-flex">
+            <img src="sneaker-img1.png">
+            
+            <div class="shoe-info-container">
+                <div class="shoe-info">
+                    <h2 class="sneaker-title">Nike Air Force One</h2>
+                    <div class="ratings">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>         
+                    </div>
+                    <h2 class="price">$<span>120.00</span></h2>
+                    <div class="sizes-container">
+                        <select id="sizes">
+                            <option value="none"></option>
+                            <option value="8.0">8</option>
+                            <option value="8.0">8.5</option>
+                            <option value="8.0">9</option>
+                            <option value="8.0">9.5</option>
+                            <option value="8.0">10</option>
+                            <option value="8.0">10.5</option>
+                            <option value="8.0">11</option>
+                        </select>
+                        <span>PLEASE SELECT A SIZE</span>
+                    </div> 
+                    
+                    <div class="shipping">
+                        <i class="fas fa-truck"></i>
+                        <p>Arrives within 5-6 business days</p>
+                    </div>
+    
+                    <button type="button" class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    
+        
+        
     </div>
 
     <section class="shop-section">
