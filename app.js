@@ -2,14 +2,14 @@
 const exitGiveawayBtn = document.querySelector('.exit-giveaway i');
 const giveawayContainer = document.querySelector('.giveaway-container');
 
+window.addEventListener('DOMContentLoaded', function(){
+    setTimeout(function(){
+        //initally 0
+        giveawayContainer.style.opacity = '1';
+    }, 2500);
 
-setTimeout(function(){
-    //initally 0
-    giveawayContainer.style.opacity = '1';
-}, 2500)
-
-//giveaway has been loaded
-exitGiveawayBtn.addEventListener('click', function(e){
+    //giveaway has been loaded
+    exitGiveawayBtn.addEventListener('click', function(e){
     const giveawayContainer = document.querySelector('.giveaway-container');
     giveawayContainer.style.opacity = '0';
     
@@ -18,7 +18,12 @@ exitGiveawayBtn.addEventListener('click', function(e){
     setTimeout(function(){
         giveawayContainer.remove();
     }, 800)
+})
 });
+
+
+
+
 
 //Make nav fixed
 const nav = document.querySelector('.nav');
@@ -84,12 +89,13 @@ clickableCards.forEach(function(card){
         
         selectedSneaker.classList.add('selected-sneaker');
 
+        //altering hard coded page
         selectedSneaker.innerHTML = `
 <div class="back-container">
     <i class="fas fa-arrow-left"></i>
 
     <div class="alert-div">
-    <p>ITEM ADDED TO CART</p>
+    <p>ITEM ADDED TO CART</p><i class="fas fa-check"></i>
 </div>
 
 </div>
@@ -109,19 +115,22 @@ clickableCards.forEach(function(card){
                 <i class="fas fa-star-half-alt"></i>         
             </div>
             <h2 class="price">$<span>120.00</span></h2>
-            <div class="sizes-container">
-                <select id="sizes">
-                    <option value="none"></option>
-                    <option value="8.0">8</option>
-                    <option value="8.0">8.5</option>
-                    <option value="8.0">9</option>
-                    <option value="8.0">9.5</option>
-                    <option value="8.0">10</option>
-                    <option value="8.0">10.5</option>
-                    <option value="8.0">11</option>
-                </select>
-                <span>PLEASE SELECT A SIZE</span>
-            </div> 
+            
+            <div class="size-div">
+                    <h3>SIZE:<span>10.5</span></h3>
+                    <div class="sizes">
+                        <div class="size">8.0</div>
+                        <div class="size">8.5</div>
+                        <div class="size">9.0</div>
+                        <div class="size">9.5</div>
+                        <div class="size">10.0</div>
+                        <div class="size">10.5</div>
+                        <div class="size">11.0</div>
+                        <div class="size">11.5</div>
+                        <div class="size">12.0</div>
+                        <div class="size">12.5</div>
+                    </div>
+                </div>
             
             <div class="shipping">
                 <i class="fas fa-truck"></i>
@@ -133,17 +142,16 @@ clickableCards.forEach(function(card){
     </div>
 </div>
 `;
-
-        selectedSneaker.style.transform = 'translateX(100%)';
+    //hidden element moves over 
+    selectedSneaker.style.transform = 'translateX(100%)';
         
-
 
         //exit card
         const goBackBtn = document.querySelector('.back-container i');
        
         goBackBtn.addEventListener('click', function(e){
             selectedSneaker.style.transform = 'translateX(-100%)';
-       })
+       })//hide page
 
 
     
@@ -162,7 +170,7 @@ clickableCards.forEach(function(card){
             alertDiv.style.visibility = 'visible';
             setTimeout(function(){
                 alertDiv.style.visibility = 'hidden';
-            }, 1000)
+            }, 2000)
 
            
             cart.classList.add('active');//display none -- to display flex/visible
@@ -173,7 +181,7 @@ clickableCards.forEach(function(card){
             <h4>${title}</h4>
 
             <div class="size-div">
-                <p>size:<span class="size">11</span></p>
+                <p>size:<span class="cart-size">11</span></p>
             </div>
 
             <p class="cart-price">$480</p> 
@@ -412,3 +420,8 @@ window.addEventListener('scroll', function(){
 }
   
 })*/
+
+
+//update size 
+ const selectedSize = document.querySelector('.sizes-container span');
+ const sizeInput = document.querySelector('#sizes');

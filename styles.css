@@ -37,7 +37,7 @@
   }
 
   section{
-    margin: 5rem 0;
+    margin: 8em 0;
   }
  
   .title{
@@ -127,9 +127,33 @@ body{
 .giveaway-content{
   padding: 1.8em 0;
   max-width: 85%;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+.giveaway-content input{
+  margin: 1.2em 0;
+  width: 80%;
+  padding: 1em;
+  border-radius: 2px;
+  border: none;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.3);
+}
+
+.send-email-btn{
+  background: black;
+  text-transform: uppercase;
+  padding: 0.5em 1.5em;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  font-family: 'Bebas Neue', cursive;
+  letter-spacing: 1px;
+  font-size: 1.2em;
+  cursor: pointer;
+  width: 60%;
+}
 
 .countdown-item h4{
   font-size: 1.2em;
@@ -312,8 +336,38 @@ body{
 }
 
 .sizes-container{
-  margin: 1.4em 0;
+  margin: 1.2em 0;
+}
 
+.size-div{
+  width: 100%;
+}
+
+.size-div h3{
+  margin: 1.2em 0;
+  font-size: 1.2rem;
+}
+
+.sizes{
+  display: grid;
+  max-width: 100%;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 0.5em;
+  row-gap: 0.5em;
+  
+}
+
+.size{
+  height: auto;
+  min-width: 100%;
+  max-width: 100%;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  color: white;
+  padding: 1em;
 }
 
 .shipping{
@@ -451,7 +505,7 @@ body{
   display: flex;
   justify-content: space-around;
   padding: 1.3em 0;
-  z-index: 999;
+  z-index: 900;
   background: rgb(238, 238, 238);
   border-bottom: 1px solid rgb(207, 206, 206);
   
@@ -602,7 +656,7 @@ body{
   border-radius: 0.3em;
 }
 
-.shopping-cart-item h4, .size-div{
+.shopping-cart-item h4{
   transform: translateX(2em);
 }
 
@@ -610,7 +664,7 @@ body{
   font-size: 0.9em;
 }
 
-.size{
+.cart-size{
   margin-left: 5px;
 }
 
@@ -661,14 +715,12 @@ body{
   display: flex;
   align-items: center;
   transition: all 0.25s ease-in-out;
-  border-top-left-radius: 8px;
 }
 
 .slide{
   min-width: 100%;
   max-width: 100%;
   overflow: hidden;
-  border-top-left-radius: 8px;
 }
 
 
@@ -677,15 +729,11 @@ body{
   min-width: 100%;
   max-width: 100%;
   height: auto;
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
 }
 
 .new-release-info{
   background: black;
   color: white;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -960,6 +1008,8 @@ body{
   margin-top: 4em;
   margin-bottom: 4em;
 }
+
+
 
 .new-release-grid{
   grid-template-columns: 1fr;
