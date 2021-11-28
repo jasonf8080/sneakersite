@@ -27,9 +27,10 @@ window.addEventListener('DOMContentLoaded', function(){
 
 //Make nav fixed
 const nav = document.querySelector('.nav');
+navHeight = nav.getBoundingClientRect().height;
 
 window.addEventListener('scroll', function(){
-    navHeight = nav.getBoundingClientRect().height;
+    
     //console.log(navHeight);
 
     if(pageYOffset > navHeight){
@@ -421,7 +422,22 @@ window.addEventListener('scroll', function(){
   
 })*/
 
+//scroll animations
 
-//update size 
- const selectedSize = document.querySelector('.sizes-container span');
- const sizeInput = document.querySelector('#sizes');
+const upcomingRelease = document.querySelectorAll('.upcoming-release-item');
+
+window.addEventListener('scroll', function(){
+    upcomingRelease.forEach(function(release){
+        const releasePos = release.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight / 1.5;
+        
+
+            if(releasePos < windowHeight){
+                release.style.opacity = '1';
+            } else {
+                release.style.opacity = '0';
+            }
+    })
+    
+})
+
