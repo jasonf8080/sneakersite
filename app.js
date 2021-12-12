@@ -2,7 +2,7 @@
 const exitGiveawayBtn = document.querySelector('.exit-giveaway i');
 const giveawayContainer = document.querySelector('.giveaway-container');
 
-window.addEventListener('DOMContentLoaded', function(){
+/*window.addEventListener('DOMContentLoaded', function(){
     setTimeout(function(){
         //initally 0
         giveawayContainer.style.opacity = '1';
@@ -19,10 +19,10 @@ window.addEventListener('DOMContentLoaded', function(){
         giveawayContainer.remove();
     }, 800)
 })
-});
+});*/
 
 
-
+document.body.style.overflow = 'auto'
 
 
 //Make nav fixed
@@ -355,7 +355,6 @@ function changeCurrentDot(){
     
     if(currentDot > 3){
         currentDot = 0;
-        console.log(currentDot);
     }
     
 
@@ -424,20 +423,27 @@ window.addEventListener('scroll', function(){
 
 //scroll animations
 
-const upcomingRelease = document.querySelectorAll('.upcoming-release-item');
 
-window.addEventListener('scroll', function(){
-    upcomingRelease.forEach(function(release){
-        const releasePos = release.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight / 1.5;
+
+
+const upcomingReleases = document.querySelectorAll('.upcoming-release-item');
+
+const options = {
+
+    threshold: 0.8 //how much the object is revealed, so when 80% of the object is revealed
+};
+
+const observer = new IntersectionObserver(function(entries, observer){
+    entries.forEach(function(entry){
+        if(entry.isIntersecting){
+            entry.target.classList.add('visible');
+        } else {
+            entry.target.classList.remove('visible');
+        }
         
-
-            if(releasePos < windowHeight){
-                release.style.opacity = '1';
-            } else {
-                release.style.opacity = '0';
-            }
     })
-    
-})
+}, options);
 
+upcomingReleases.forEach(function(upcomingRelease){
+    observer.observe(upcomingRelease);
+})
