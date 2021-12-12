@@ -1043,6 +1043,10 @@ body{
   display: none;
 }
 
+.upcoming-releases-container{
+  max-width: 85%;
+}
+
 }
 
 
