@@ -2,7 +2,7 @@
 const exitGiveawayBtn = document.querySelector('.exit-giveaway i');
 const giveawayContainer = document.querySelector('.giveaway-container');
 
-/*window.addEventListener('DOMContentLoaded', function(){
+window.addEventListener('DOMContentLoaded', function(){
     setTimeout(function(){
         //initally 0
         giveawayContainer.style.opacity = '1';
@@ -19,14 +19,14 @@ const giveawayContainer = document.querySelector('.giveaway-container');
         giveawayContainer.remove();
     }, 800)
 })
-});*/
+});
 
 
-document.body.style.overflow = 'auto'
+document.body.style.overflow = 'auto';
 
 
 //Make nav fixed
-const nav = document.querySelector('.nav');
+/*const nav = document.querySelector('.nav');
 navHeight = nav.getBoundingClientRect().height;
 
 window.addEventListener('scroll', function(){
@@ -58,7 +58,7 @@ searchIcon.addEventListener('click', function(e){
         searchContainer.style.height = `0px`;
     }
 });
-
+*/
 //access cart
 const cartIcon = document.querySelector('.lni.lni-cart');
 cartIcon.addEventListener('click', function(){
@@ -93,7 +93,7 @@ clickableCards.forEach(function(card){
         //altering hard coded page
         selectedSneaker.innerHTML = `
 <div class="back-container">
-    <i class="fas fa-arrow-left"></i>
+    <i class="fas fa-chevron-left"></i>
 
     <div class="alert-div">
     <p>ITEM ADDED TO CART</p><i class="fas fa-check"></i>
@@ -336,38 +336,44 @@ setInterval(function(){
     })
 */
     
-changeCurrentDot();
 
     
 }, 3000);
 
+
+
+
+
+
+
+//change dot along with image/shoe info in slider
+
 const dots = document.querySelectorAll('.dots div');
-let currentDot = 0;
+let currentDot = 0;//change to counter?//
 
-document.addEventListener('DOMContentLoaded', function(){
-    changeCurrentDot(currentDot);
-})
+window.addEventListener('DOMContentLoaded', function(){
+    changeCurrentDot(currentDot);//pass in currentDot into function
+});
 
-function changeCurrentDot(){
-    let selectedDot = dots[currentDot];
-    currentDot++;
-   
-    
-    if(currentDot > 3){
-        currentDot = 0;
-    }
-    
-
-
+function changeCurrentDot(fullDot){//holder for variable that will be passed in
+    const activeDot = dots[fullDot];
     dots.forEach(function(dot){
-        dot.innerHTML = '<i class="fas fa-circle">';
-        selectedDot.innerHTML = '<i class="far fa-circle">';
-    }) 
+        dot.innerHTML = '<i class="fas fa-circle"></i>'
+        activeDot.innerHTML = '<i class="far fa-circle"></i>';
+    });
 }
 
+setInterval(function(){
+    currentDot++;
+    changeCurrentDot(currentDot);
+
+}, 3000)
 
 
 
+
+
+//view more products
 const viewMoreBtn = document.querySelector('.view-more-btn');
 const loaderContainer = document.querySelector('.loader-container');
 const loader = document.querySelector('.loader-container i');
@@ -394,7 +400,7 @@ viewMoreBtn.addEventListener('click', function(e){
 
 })
 
-const backToTopBtn = document.querySelector('.back-to-top-btn');
+/*const backToTopBtn = document.querySelector('.back-to-top-btn');
 
 window.addEventListener('scroll', function(){
     if(pageYOffset > 3300){
@@ -402,7 +408,7 @@ window.addEventListener('scroll', function(){
     } else {
         backToTopBtn.classList.remove('active');
     };
-})
+})*/
 
 
 
@@ -429,8 +435,7 @@ window.addEventListener('scroll', function(){
 const upcomingReleases = document.querySelectorAll('.upcoming-release-item');
 
 const options = {
-
-    threshold: 0.8 //how much the object is revealed, so when 80% of the object is revealed
+    threshold: 1.0 //how much the object is revealed, so when 100% of the object is revealed
 };
 
 const observer = new IntersectionObserver(function(entries, observer){
@@ -440,10 +445,89 @@ const observer = new IntersectionObserver(function(entries, observer){
         } else {
             entry.target.classList.remove('visible');
         }
-        
     })
 }, options);
 
+
 upcomingReleases.forEach(function(upcomingRelease){
-    observer.observe(upcomingRelease);
+    observer.observe(upcomingRelease);//observe each release
 })
+
+
+
+
+
+
+
+const shopOptions = {
+    threshold: 0.5 //how much the object is revealed, so when 100% of the object is revealed
+};
+
+
+const shopItemsObserver = new IntersectionObserver(function(entries, shopItemsObserver){
+    entries.forEach(function(entry){
+        if(entry.isIntersecting){
+            entry.target.classList.add('visible');
+            //console.log(entry.target)
+        } else {
+            entry.target.classList.remove('visible');
+        }
+    })
+}, shopOptions)
+
+const cards = document.querySelectorAll('.card');
+
+cards.forEach(function(card){
+    shopItemsObserver.observe(card);
+});
+
+
+
+
+
+
+
+
+const mediaFeedOptions = {
+    threshold: 0.3
+}
+
+const mediaFeedObserver = new IntersectionObserver(function(entries, mediaFeedObserver){
+    entries.forEach(function(entry){
+        if(entry.isIntersecting){
+            entry.target.classList.add('visible');
+        } else {
+            entry.target.classList.remove('visible');
+        }
+    })
+}, mediaFeedOptions)
+
+const mediaFeedImgs = document.querySelectorAll('.media-img-container');
+
+mediaFeedImgs.forEach(function(mediaFeedImg){
+    mediaFeedObserver.observe(mediaFeedImg);
+})
+
+
+const brandsOptions = {
+    threshold: 0.5
+}
+
+const brandsObserver = new IntersectionObserver(function(entries, brandsObserver){
+    entries.forEach(function(entry){
+        if(entry.isIntersecting){
+            entry.target.classList.add('visible');
+        } else {
+            entry.target.classList.remove('visible');
+        }
+    });
+}, brandsOptions)
+
+
+const brandImgs = document.querySelectorAll('.shop-option-item');
+
+
+brandImgs.forEach(function(brandImg){
+    brandsObserver.observe(brandImg);
+})
+

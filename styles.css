@@ -365,9 +365,16 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+  background: white;
+  color: black;
+  border: 2px solid black;
+  padding: 1em;
+  cursor: pointer;
+}
+
+.size:hover{
   background: black;
   color: white;
-  padding: 1em;
 }
 
 .shipping{
@@ -403,128 +410,84 @@ body{
 }
 
 /*Acual Site CSS//////////////////////////////////////////////////*/
+.logo-container{
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(241, 241, 241);
+  padding: 0.5em 0;
+}
+
+.logo-container img{
+  max-width: 80px;
+  height: auto;
+}
+
+.logo-container h3{
+  font-size: 1.6em;
+}
+
+
 body{
   position: relative;
   font-size: 16px;
 }
 
 /*header*/
-.header{
-  height: 75vh;
+
+
+
+
+
+
+
+
+.nav-container{
   width: 100%;
-  /*background: url("headerimg.webp") no-repeat center/cover;*/
-  background: url("https://www.sneakerfiles.com/wp-content/uploads/2017/05/adidas-yeezy-boost-350-v2-dark-green-on-feet.jpg") no-repeat center/cover;
-  z-index: 1;
-  position: relative;
-
-}
-
-.header::after{
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: -1;
-}
-
-.header-content{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 5;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  animation: showHeaderContent 2.5s;
-  animation-fill-mode: forwards;
-}
-
-.header-content h2{
-  font-size: 4.6em;
-  color: white;
-  z-index: 40;
-  text-shadow: 2px 2px rgb(0,0,0);
-  font-weight: lighter;
-}
-
-.header-btn{
-  background: transparent;
-  color: white;
-  border: 2px solid white;
-  font-family: inherit;
-  letter-spacing: 1px;
-  width: 60%;
-  font-size: 1.5em;
-  padding: 0.5em 0;
-  text-align: center;
-  position: relative;
-  z-index: 99;
-  cursor: pointer;
-}
-
-.header-btn::after{
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 0px;
-  background: white;
-  transition:  all 0.5s;
-  z-index: -1;
-}
-
-.header-btn:hover{
-  color: black;
-}
-
-.header-btn:hover::after{
-  width: 100%;
+  background: black;
+  border-bottom: 1px solid rgb(207, 206, 206);
 }
 
 
-
-
-@keyframes showHeaderContent {
-  0%{
-    opacity: 0;
-  }
-
-  100%{
-    opacity: 1;
-  }
-}
 
 .nav{
-  width: 100%;
+  max-width: 90%;
   display: flex;
-  justify-content: space-around;
-  padding: 1.3em 0;
+  justify-content: space-between;
+  padding: 0.75em 0;
   z-index: 900;
-  background: rgb(238, 238, 238);
-  border-bottom: 1px solid rgb(207, 206, 206);
-  
+  color: white;
+  margin: 0 auto;
 }
 
-.nav-fixed{
-  position: fixed;
-  background: rgb(238, 238, 238);
+.nav-contact{
+  display: flex;
+  align-items: center;
 }
 
+.nav-contact > *{
+  margin-right: 0.5em;
+}
 
 
 .nav i{
   color: white;
-  font-size: 2.4em;
+  font-size: 1.2em;
   cursor: pointer;
-  color: rgb(165, 165, 165);
+
 }
   
+
+.phone-info{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.phone-info i{
+  margin-right: 0.5em;
+}
 
 
 .nav i:hover{
@@ -532,6 +495,14 @@ body{
   transition: 0.3s;
 }
 
+.header-slider-container{
+  display: flex;
+  overflow: auto;
+}
+
+.slider-item{
+  min-width: 100%;
+}
 .search-bar-container{
   height: 0px;
   overflow: hidden;
@@ -695,8 +666,57 @@ body{
   letter-spacing: 1px;
 }
 
+.shop-options{
+  margin: 4em 0;
+}
+
+.shop-options-grid{
+  margin: 0 auto;
+  display: grid;
+  max-width: 85%;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 1em;
+  row-gap: 2em;
+}
+
+.shop-option-item{
+  max-width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.75s;
+}
+
+.shop-option-item.visible{
+  opacity: 1;
+}
 
 
+
+.shop-option-item img{
+  max-width: 100%;
+  min-width: 100%;
+  height: auto;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1.5em;
+}
+
+.shop-option-item a{
+  background: transparent;
+  color: rgb(30,30,30);
+  border: 1px solid rgb(30,30,30);
+  padding: 0.5em 1.75em;
+  z-index: 999;
+  font-size: 1.2em;
+  transition: all 0.5s;
+}
+
+.shop-option-item a:hover{
+  background: black;
+  color: white;
+}
 /*New Release Section*/
 .new-release-grid{
   display: grid;
@@ -773,17 +793,27 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: black;
+    background: rgb(233, 233, 233);
     max-width: 100%;
-    color: white;
+    color: rgb(95, 95, 95);
     cursor: pointer;
     position: relative;
-    transition: transform 0.4s;
-    /*opacity: 0;*/
+    transition: all 0.75s;
+    opacity: 0;
+}
+
+.card.visible{
+  opacity: 1;
 }
 
 .card h2{
   font-size: 1.2em;
+}
+
+.card p{
+  text-align: center;
+  font-size: 1.1em;
+  margin: 0.5em 0;
 }
 
 
@@ -791,6 +821,7 @@ body{
     max-width: 100%;
     min-width: 100%;
     height: auto;
+    border-bottom: 1px solid rgb(95, 95, 95);
     
 }
 
@@ -951,15 +982,85 @@ body{
   }
 }
 
+/*Media Feed*/
+
+.media-feed, .follow-us{
+  background: rgb(238, 238, 238);
+  color: rgb(95, 95, 95);
+  padding: 5em 0;
+  margin: 0;
+}
+
+.media-feed{
+  padding-bottom: 0;
+}
+
+.media-feed-grid{
+  margin: 0 auto;
+  display: grid;
+  max-width: 75%;
+  background: white;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 0.75em;
+  row-gap: 0.75em;
+  padding: 0.75em;
+}
+
+.media-img-container{
+  max-width: 100%;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.24);
+  opacity: 0;
+  transition: all 0.75s;
+  position: relative;
+}
+
+.media-img-container.visible{
+  opacity: 1;
+}
 
 
+.media-img-container img{
+  max-width: 100%;
+  min-width: 100%;
+  height: auto;
+  max-height: 100%;
+}
 
+.media-img-container i{
+  position: absolute;
+  font-size: 1.5em;
+  color: white;
+  text-shadow: 1px 1px rgb(0,0,0);
+  bottom: 1em;
+  right: 1em;
+}
 
+/*Follow Us*/
+.follow-us{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid rgb(95, 95, 95);
+  margin-bottom: 40px;
+}
 
+.follow-us h2{
+  margin-bottom: 1em;
+}
 
+.follow-us i{
+ font-size: 3em;
+ margin-right: 0.5em;
+}
 
-
-
+.follow-us i:last-child{
+  margin-right: 0;
+ }
+ 
+ 
+ 
+ 
 
 
 
@@ -988,6 +1089,10 @@ body{
 
   .giveaway{
     max-width: 65%;
+  }
+
+  .shop-options-grid{
+    grid-template-columns: repeat(2, 1fr);
   }
 
 
@@ -1047,6 +1152,11 @@ body{
   max-width: 85%;
 }
 
+.media-feed-grid{
+  grid-template-columns: repeat(2, 1fr);
+
+}
+
 }
 
 
@@ -1067,9 +1177,7 @@ body{
     text-align: left;
   }
 
-  .header{
-    height: 60vh;
-  }
+ 
 
   .shopping-cart-item{
     width: 85%;
@@ -1080,26 +1188,13 @@ body{
   }
 
 
-  .nav{
-   flex-direction: row;
-   align-items: center;
-   height: 50px;
-   width: 100%;
-   z-index: 999;
-   box-shadow: 0px -5px 5px 0px rgba(0, 0, 0, 0.8);
-  
-  }
+
 
   
 
-  .nav-fixed{
-    position: fixed;
-    background: rgb(238, 238, 238);
-  }
+  
 
-  .nav-fixed.nav i{
-    text-shadow: none;
-  }
+  
 
 
 
