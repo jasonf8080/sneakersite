@@ -466,15 +466,15 @@ body{
   align-items: center;
 }
 
-.nav-contact > *{
-  margin-right: 0.5em;
-}
+
+ 
 
 
 .nav i{
   color: white;
-  font-size: 1.2em;
+  font-size: 1.5em;
   cursor: pointer;
+  margin-right: 0.5em;
 
 }
   
@@ -496,19 +496,59 @@ body{
 }
 
 .header-slider-container{
-  display: flex;
   overflow: auto;
+  position: relative;
+}
+
+.frame{
+  display: flex;
+  align-items: center;
+  transition: all 0.5s ease;
+  height: 80vh;
 }
 
 .slider-item{
   min-width: 100%;
+  min-height: 100%;
+ 
 }
+
+.slider-item:nth-child(1){
+  background: url("https://pbs.twimg.com/media/Dw3tBQtXgAApNtA.jpg") no-repeat center/cover;
+}
+
+.slider-item:nth-child(2){
+  background: url("https://i.pinimg.com/736x/5e/58/f5/5e58f5c86d0571e00a02123e628cc394.jpg") no-repeat center/cover;
+}
+
+
+.slider-item:nth-child(3){
+  background: url("https://miro.medium.com/max/1800/1*6O1aV4lmg6q3b9d1kmxKMw@2x.jpeg") no-repeat center/cover;
+}
+
+
+.slider-item:nth-child(4){
+  background: url("https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2018%2F11%2Foff-white-nike-air-max-90-black-on-foot-6.jpg?quality=95&w=1170&cbr=1&q=90&fit=max") no-repeat center/cover;
+}
+
+.dots{
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+  color: white;
+  display: flex;
+  align-items: center;
+  border: 5px solid red;
+}
+
+
+
+
 .search-bar-container{
   height: 0px;
   overflow: hidden;
   transition: all 1s;
 }
-
 
 
 
@@ -731,11 +771,7 @@ body{
   overflow: hidden;
 }
 
-.frame{
-  display: flex;
-  align-items: center;
-  transition: all 0.25s ease-in-out;
-}
+
 
 .slide{
   min-width: 100%;
@@ -761,20 +797,6 @@ body{
   
 }
 
-.dots{
-  position: absolute;
-  bottom: -3em;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  align-items: center;
-}
-
-.dots i{
-  margin-right: 1em;
-  color: black;
-  font-size: 1.3em;
-}
 
 
 
@@ -1078,6 +1100,9 @@ body{
     font-size: 16px;
   }
   
+  .frame{
+    height: 75vh;
+  }
 
   
 
@@ -1177,6 +1202,9 @@ body{
     text-align: left;
   }
 
+  .frame{
+    height: 70vh;
+  }
  
 
   .shopping-cart-item{
@@ -1188,9 +1216,18 @@ body{
   }
 
 
+  .shop-options-grid{
+    grid-template-columns: 1fr;
+  }
 
+  .shop-option-item img{
+    margin-bottom: 1.5rem;
+  }
 
-  
+  .shop-option-item a{
+    padding: 0.5rem 1.75rem;
+    font-size: 1.2rem;
+  }
 
   
 

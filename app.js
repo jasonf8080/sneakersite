@@ -255,90 +255,22 @@ function updateCartAmount(){
    }
 }
 
-//new release slider
-const slides = document.querySelectorAll('.slide');
+// header slider
+
+let counter = 0 
 const frame = document.querySelector('.frame');
-let counter = 0;
+const headerImgs = document.querySelectorAll('.slider-item');
 
-
-setInterval(function(){ 
+setInterval(function(){
     counter++;
-    //console.log(counter);
+    console.log(counter);
+    frame.style.transform = `translateX(-${counter}00%)`;
 
-    frame.style.transform = `translateX(-${counter * 100}%)`;
-    if(counter > slides.length - 1 - 1){
-        counter = -1;
+    if(counter > headerImgs.length - 1){
+       counter = - 1;
     }
+}, 5000)
 
-}, 3000);
-
-
-const featuredShoeInfo = [
-
-    {
-        title: 'Nike Airmax Plus',
-        price: '$190',
-    },
-
-    {
-        title: 'Jordan 1 Off White',
-        price: '$120',
-    },
-
-    {
-        title: 'Nike Pink Yellow Blue',
-        price: '$410',
-    },
-
-    {
-        title: 'Yeezy 700 Cement',
-        price: '$320',
-    },
-
-
-];
-
-
-
-const newReleaseTitle = document.querySelector('.new-release-title');
-const newReleasePrice = document.querySelector('.new-release-price');
-let currentRelease = 0;
-
-
-function updateFeaturedShoe(){
-    newReleaseTitle.textContent = featuredShoeInfo[currentRelease].title;
-    newReleasePrice.textContent = featuredShoeInfo[currentRelease].price;
-};
-
-updateFeaturedShoe(currentRelease);
-
-
-
-setInterval(function(){ 
-   currentRelease++;
-   //console.log(currentRelease)
-
-   updateFeaturedShoe(currentRelease);
-    if(currentRelease > featuredShoeInfo.length - 1 - 1){
-        currentRelease = -1;
-    }
-
-    
-    //console.log(selectedDot);
-
-   /* dots.forEach(function(dot){
-       dot.innerHTML = '<i class="fas fa-circle">';
-     
-
-       //selectedDot.innerHTML = '><i class="far fa-circle"></i>';
-
-
-    })
-*/
-    
-
-    
-}, 3000);
 
 
 
@@ -348,7 +280,7 @@ setInterval(function(){
 
 //change dot along with image/shoe info in slider
 
-const dots = document.querySelectorAll('.dots div');
+/*const dots = document.querySelectorAll('.dots div');
 let currentDot = 0;//change to counter?//
 
 window.addEventListener('DOMContentLoaded', function(){
@@ -368,7 +300,7 @@ setInterval(function(){
     changeCurrentDot(currentDot);
 
 }, 3000)
-
+*/
 
 
 
@@ -510,7 +442,7 @@ mediaFeedImgs.forEach(function(mediaFeedImg){
 
 
 const brandsOptions = {
-    threshold: 0.5
+    threshold: 0.35
 }
 
 const brandsObserver = new IntersectionObserver(function(entries, brandsObserver){
