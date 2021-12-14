@@ -266,7 +266,7 @@ setInterval(function(){
     console.log(counter);
     frame.style.transform = `translateX(-${counter}00%)`;
 
-    if(counter > headerImgs.length - 1){
+    if(counter > headerImgs.length - 1 - 1){
        counter = - 1;
     }
 }, 5000)
@@ -275,12 +275,7 @@ setInterval(function(){
 
 
 
-
-
-
-//change dot along with image/shoe info in slider
-
-/*const dots = document.querySelectorAll('.dots div');
+const dots = document.querySelectorAll('.dots div');
 let currentDot = 0;//change to counter?//
 
 window.addEventListener('DOMContentLoaded', function(){
@@ -299,8 +294,12 @@ setInterval(function(){
     currentDot++;
     changeCurrentDot(currentDot);
 
-}, 3000)
-*/
+    if(currentDot > dots.length - 1 - 1){
+        currentDot = - 1;
+    }
+
+}, 5000)
+
 
 
 
@@ -367,7 +366,7 @@ window.addEventListener('scroll', function(){
 const upcomingReleases = document.querySelectorAll('.upcoming-release-item');
 
 const options = {
-    threshold: 1.0 //how much the object is revealed, so when 100% of the object is revealed
+    threshold: 0.5 //how much the object is revealed, so when 100% of the object is revealed
 };
 
 const observer = new IntersectionObserver(function(entries, observer){
@@ -392,7 +391,7 @@ upcomingReleases.forEach(function(upcomingRelease){
 
 
 const shopOptions = {
-    threshold: 0.5 //how much the object is revealed, so when 100% of the object is revealed
+    threshold: 0.4 //how much the object is revealed, so when 100% of the object is revealed
 };
 
 

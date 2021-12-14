@@ -496,14 +496,14 @@ body{
 }
 
 .header-slider-container{
-  overflow: auto;
+  overflow: hidden;
   position: relative;
 }
 
 .frame{
   display: flex;
   align-items: center;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease-in-out;
   height: 80vh;
 }
 
@@ -532,13 +532,14 @@ body{
 }
 
 .dots{
-  position: fixed;
-  bottom: 2em;
-  right: 2em;
+  max-width: 100px;
+  position: sticky;
+  bottom: 2.5em;
+  left: 90%;
   color: white;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  border: 5px solid red;
 }
 
 
@@ -815,13 +816,13 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: rgb(233, 233, 233);
     max-width: 100%;
-    color: rgb(95, 95, 95);
+    color: white;
     cursor: pointer;
     position: relative;
     transition: all 0.75s;
     opacity: 0;
+    background: rgb(0,0,0);
 }
 
 .card.visible{
@@ -829,13 +830,14 @@ body{
 }
 
 .card h2{
-  font-size: 1.2em;
+  font-size: 1.3em;
+  font-weight: lighter;
 }
 
 .card p{
   text-align: center;
-  font-size: 1.1em;
-  margin: 0.5em 0;
+  font-size: 1.25em;
+  margin-top: 0.5em;
 }
 
 
@@ -843,7 +845,7 @@ body{
     max-width: 100%;
     min-width: 100%;
     height: auto;
-    border-bottom: 1px solid rgb(95, 95, 95);
+   border-bottom: 1px solid rgb(158, 158, 158);
     
 }
 
@@ -859,7 +861,7 @@ body{
   height: 100%;
   width: 100%;
   background: transparent;
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.205);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
 }
 
 .card:hover{
@@ -957,7 +959,7 @@ body{
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1.5em;
-  border-bottom: 1px solid rgb(206, 206, 206);
+  border-bottom: 1px solid rgb(221, 221, 221);
   padding-bottom: 1.5em;
   opacity: 0;
   transition: all 0.75s;
@@ -1173,13 +1175,19 @@ body{
   display: none;
 }
 
-.upcoming-releases-container{
-  max-width: 85%;
+.upcoming-release-item{
+  flex-direction: column;
 }
+
+.upcoming-release-item .img-container{
+  margin-bottom: 2em;
+}
+
+
 
 .media-feed-grid{
   grid-template-columns: repeat(2, 1fr);
-
+  max-width: 85%;
 }
 
 }
