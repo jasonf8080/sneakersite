@@ -1,29 +1,19 @@
 //giveaway
-const exitGiveawayBtn = document.querySelector('.exit-giveaway i');
-const giveawayContainer = document.querySelector('.giveaway-container');
 
-window.addEventListener('DOMContentLoaded', function(){
-    setTimeout(function(){
-        //initally 0
-        giveawayContainer.style.opacity = '1';
-    }, 2500);
 
-    //giveaway has been loaded
-    exitGiveawayBtn.addEventListener('click', function(e){
-    const giveawayContainer = document.querySelector('.giveaway-container');
-    giveawayContainer.style.opacity = '0';
-    
-    document.body.style.overflow = 'auto';
 
-    setTimeout(function(){
-        giveawayContainer.remove();
-    }, 800)
+
+//make nav fixed
+const nav = document.querySelector('.fixed-nav-container');
+
+window.addEventListener('scroll', function(){
+    const navHeight = nav.getBoundingClientRect().height;
+    if(pageYOffset > navHeight){
+        nav.style.position = 'fixed';
+    } else {
+        nav.style.position = 'static';
+    }
 })
-});
-
-
-document.body.style.overflow = 'auto';
-
 
 //Make nav fixed
 /*const nav = document.querySelector('.nav');
@@ -79,181 +69,35 @@ const singleCard = document.querySelector('.card-clicked');
 const cart = document.querySelector('.shopping-cart');
 const selectedSneaker = document.querySelector('.selected-sneaker');
 
+clickableCards.forEach(function(item){
+    item.addEventListener('click', function(e){
+        const selectedSneaker = e.target.previousElementSibling.previousElementSibling.src;
+        const selectedBrand = e.target.previousElementSibling.children[0].textContent;
+        const selectedTitle = e.target.previousElementSibling.children[1].textContent;
+        const selectedPrice = e.target.previousElementSibling.children[2].textContent;
 
-
-clickableCards.forEach(function(card){
-    card.addEventListener('click', function(e){
+        localStorage.setItem('image', selectedSneaker);
+        localStorage.setItem('brand', selectedBrand);
+        localStorage.setItem('title', selectedTitle);
+        localStorage.setItem('price', selectedPrice);
         
-
-        const img = e.target.parentElement.children[0].src;
-        const title = e.target.parentElement.children[1].children[0].textContent;
-        
-        selectedSneaker.classList.add('selected-sneaker');
-
-        //altering hard coded page
-        selectedSneaker.innerHTML = `
-<div class="back-container">
-    <i class="fas fa-chevron-left"></i>
-
-    <div class="alert-div">
-    <p>ITEM ADDED TO CART</p><i class="fas fa-check"></i>
-</div>
-
-</div>
-
-
-<div class="image-info-flex">
-    <img src="${img}">
-    
-    <div class="shoe-info-container">
-        <div class="shoe-info">
-            <h2 class="sneaker-title">${title}</h2>
-            <div class="ratings">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>         
-            </div>
-            <h2 class="price">$<span>120.00</span></h2>
-            
-            <div class="size-div">
-                    <h3>SIZE:<span>10.5</span></h3>
-                    <div class="sizes">
-                        <div class="size">8.0</div>
-                        <div class="size">8.5</div>
-                        <div class="size">9.0</div>
-                        <div class="size">9.5</div>
-                        <div class="size">10.0</div>
-                        <div class="size">10.5</div>
-                        <div class="size">11.0</div>
-                        <div class="size">11.5</div>
-                        <div class="size">12.0</div>
-                        <div class="size">12.5</div>
-                    </div>
-                </div>
-            
-            <div class="shipping">
-                <i class="fas fa-truck"></i>
-                <p>Arrives within 5-6 business days</p>
-            </div>
-
-            <button type="button" class="add-to-cart-btn">Add to Cart</button>
-        </div>
-    </div>
-</div>
-`;
-    //hidden element moves over 
-    selectedSneaker.style.transform = 'translateX(100%)';
-        
-
-        //exit card
-        const goBackBtn = document.querySelector('.back-container i');
-       
-        goBackBtn.addEventListener('click', function(e){
-            selectedSneaker.style.transform = 'translateX(-100%)';
-       })//hide page
-
-
-    
-    
-    
+    })
+})
 
 
 
 
 
     //pt2 --add an item to cart - from individual card
-    const addToCartBtn = document.querySelector('.add-to-cart-btn');
-    const alertDiv = document.querySelector('.alert-div');
-
-    addToCartBtn.addEventListener('click', function(e){
-            alertDiv.style.visibility = 'visible';
-            setTimeout(function(){
-                alertDiv.style.visibility = 'hidden';
-            }, 2000)
-
-           
-            cart.classList.add('active');//display none -- to display flex/visible
-            const cartItem = document.createElement('div');//create new item
-            cartItem.classList.add('shopping-cart-item');
-            cartItem.innerHTML = `<img src="${img}">
-
-            <h4>${title}</h4>
-
-            <div class="size-div">
-                <p>size:<span class="cart-size">11</span></p>
-            </div>
-
-            <p class="cart-price">$480</p> 
-             <i class="lni lni-close remove-btn"></i>`
-            ;
-
-
-           //toggle cart height -- after item is added
-            cartIcon.addEventListener('click', function(){
-               
-                if(cart.classList.contains('active')){
-                    cart.classList.remove('active');
-                    //solves the padding issue cart.style.padding = '0px';
-                } else {
-                    cart.classList.add('active');
-                }
-
-
-            });
-
-            
-         
-
-            cart.appendChild(cartItem);//add item to cart element - add list item to list
-
-            const cartCount = document.querySelector('.cart-icon-container span');
-            cartCount.classList.add('active');
-             //count cart items
-            updateCartAmount();
-
-            //remove from cart
-            const removeCartBtns = document.querySelectorAll('.shopping-cart-item i');
-            removeCartBtns.forEach(function(removeCartBtn){
-                removeCartBtn.addEventListener('click', function(e){
-                    e.target.parentElement.remove();
-                    updateCartAmount();
-
-                    if(cart.innerHTML === ''){
-                        cart.classList.remove('active');
-                    }
-                });
-            });
+   
+          
 
            
     
-    });
-
-  
-    });//event listener end
-})//for each end
 
 
-const headerContent = document.querySelector('.header-content');
 
 
-function updateCartAmount(){
-    const cartCount = document.querySelector('.cart-icon-container span');
-    const cartItems = document.querySelectorAll('.shopping-cart-item');
-    const headerContent = document.querySelector('.header-content');
-
-   cartCount.textContent = cartItems.length;
-
-
-   if(cartItems.length === 0){
-        cartCount.style.visibility = 'hidden';
-        headerContent.style.visibility = 'visible';
-   } else {
-    cartCount.style.visibility = 'visible';
-    headerContent.style.visibility = 'hidden';
-   }
-}
 
 // header slider
 
