@@ -14,3 +14,79 @@ window.addEventListener('load', function(){
     selectedSneakerTitle.textContent = title;
     selectedSneakerPrice.textContent = price;
 })
+
+//selecting a size
+ const sizes = document.querySelectorAll('.size');
+ const selectedSize = document.querySelector('.selected-size span');
+
+ sizes.forEach(function(size){
+     size.addEventListener('click', function(e){
+         const activeSize = e.target;
+         selectedSize.textContent = activeSize.textContent;
+       
+        
+        size.classList.remove('active');
+        activeSize.classList.add('active');
+        
+     })
+ })
+
+ //add item to cart
+const addToCartBtn = document.querySelector('.add-to-cart-btn');
+const shoppingCart = document.querySelector('.shopping-cart');
+const cover = document.querySelector('.cover');
+
+addToCartBtn.addEventListener('click', function(e){
+    //size is not selected
+    if(selectedSize.textContent === ''){
+        selectedSize.textContent = 'Please Select a Size';
+
+        setTimeout(function(){
+            selectedSize.textContent = '';
+        }, 1500)   
+             
+    } else {
+        shiftShoppingCart();
+        cover.style.display = 'block';//alter body background color
+
+        //get selected sneaker elements
+        const cartImg = e.target.parentElement.previousElementSibling.children[0].src;
+        const cartTitle = e.target.parentElement.children[1].textContent;
+       
+
+        const cartItem = document.createElement('div');
+        cartItem.classList.add('cart-item');
+
+        cartItem.innerHTML = `<div class="cart-img-container">
+        <img src="${cartImg}">
+    </div>
+
+    <div class="cart-info">
+        <h3 class="cart-title">${cartTitle}</h3>
+        <p class="cart-size">11.5</p>
+    </div>
+
+    <div class="exit-price">
+         <i class="lni lni-close"></i>
+         <p>$120.99</p>
+    </div>`;
+
+    shoppingCart.appendChild(cartItem);
+
+    }
+})
+
+
+function shiftShoppingCart(){
+    shoppingCart.classList.add('active');
+}
+
+
+
+//hide shopping cart 
+const exitCartBtn = document.querySelector('.cart-title-exit i');
+
+exitCartBtn.addEventListener('click', function(){
+    shoppingCart.classList.remove('active');
+    cover.style.display = 'none';
+})

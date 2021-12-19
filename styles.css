@@ -454,6 +454,7 @@ body{
 .header-slider-container{
   overflow: hidden;
   position: relative;
+  height: 80vh;
 }
 
 .frame{
@@ -487,12 +488,25 @@ body{
   background: url("https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2018%2F11%2Foff-white-nike-air-max-90-black-on-foot-6.jpg?quality=95&w=1170&cbr=1&q=90&fit=max") no-repeat center/cover;
 }
 
-.dots{
-  max-width: 100px;
+.header-info{
   position: sticky;
-  bottom: 2.5em;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 3em;
+  background: rgba(0, 0, 0, 0.473);
+}
+
+.header-info h3{
+  color: white;
+  font-size: 2.75em;
+  text-shadow: 2px 2px rgb(0,0,0);
+  max-width: 70%;
+}
+
+.dots{
+  width: 100px;
   color: white;
   display: flex;
   justify-content: space-between;
@@ -997,6 +1011,20 @@ body{
 
  .index3-page{
    position: relative;
+
+ }
+
+ .cover{
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   min-height: 100vh;
+   height: 100%;
+   width: 100%;
+   background: rgba(0, 0, 0, 0.7);
+   z-index: 99;
+   display: none;
  }
 
  .selected-shoe-section{
@@ -1005,7 +1033,7 @@ body{
    display: grid;
    grid-template-columns: 1.2fr 1fr;
    margin-top: 3em;
-   column-gap: 1.5em;
+   column-gap: 2em;
    row-gap: 1.5em;
  }
 
@@ -1049,6 +1077,10 @@ body{
  .selected-size{
    font-size: 1.2em;
    margin-bottom: 10px;
+ } 
+
+ .selected-size span{
+   margin-left: 8px;
  }
 
  .size-select{
@@ -1069,9 +1101,15 @@ body{
   transition: 0.5s;
  }
 
+
  .size:hover{
    background: black;
    color: white;
+ }
+
+ .size.active{
+  background: black;
+  color: white;
  }
 
  
@@ -1097,10 +1135,16 @@ body{
   position: absolute;
   top: 0;
   right: -100%;
-  border: 1px solid red;
   background: rgb(250, 250, 250);
-  min-height: 100%;
+  min-height: 100vh;
+  height: 100%;
   width: 40vw;
+  transition: 0.5s;
+  z-index: 999;
+}
+
+.shopping-cart.active{
+  right: 0;
 }
 
 .cart-title-exit{
@@ -1117,6 +1161,49 @@ body{
 
 .cart-title-exit i{
   font-size: 1.4em;
+  cursor: pointer;
+}
+
+.cart-item{
+  max-width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr 0.5fr;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  border-bottom: 1px solid rgb(221, 221, 221);
+  padding: 1em 0;
+}
+
+.cart-item > *{
+  max-width: 100%;
+  min-width: 100%;
+}
+
+.cart-img-container img{
+  max-width: 100%;
+  height: auto;
+}
+
+.cart-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 1px solid red
+ 
+}
+.cart-info > *{
+  padding-left: 2em;
+}
+.exit-price{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.exit-price p{
+  font-size: 1.3em;
 }
 
 
@@ -1225,12 +1312,7 @@ body{
     font-size: 13px;
   }
 
-  .shopping-cart img{
-    max-width: 70px;
-    height: auto;
-    text-align: left;
-  }
-
+  
   .frame{
     height: 50vh;
   }
