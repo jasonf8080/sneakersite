@@ -1333,9 +1333,11 @@ body{
 
   .shop-section-grid{
     display: grid;
-    grid-template-columns: 1fr;
-    max-width: 85%;
-    row-gap: 35px;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%;
+    column-gap: 10px;
+    row-gap: 10px;
+    padding: 10px;
     margin: 0 auto;
 }
 
