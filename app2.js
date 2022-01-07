@@ -1,3 +1,12 @@
+const shoppingCartIcon = document.querySelector('.lni.lni-cart');
+
+shoppingCartIcon.addEventListener('click', function(){
+    shiftShoppingCart();
+    cover.style.display = 'block';
+})
+
+
+
 const selectedSneakerImg = document.querySelector('.selected-shoe-container img');
 const selectedSneakerBrand = document.querySelector('.brand');
 const selectedSneakerTitle = document.querySelector('.shoe-name');
@@ -24,10 +33,10 @@ window.addEventListener('load', function(){
          const activeSize = e.target;
          selectedSize.textContent = activeSize.textContent;
        
-        
-        size.classList.remove('active');
-        activeSize.classList.add('active');
-        
+        sizes.forEach(function(size){
+            size.classList.remove('active');
+            activeSize.classList.add('active');
+        })
      })
  })
 
@@ -72,8 +81,23 @@ addToCartBtn.addEventListener('click', function(e){
     </div>`;
 
     shoppingCart.appendChild(cartItem);
+    
+    
+    //remove item from cart
+    const removeBtns = cartItem.querySelectorAll('i');
+    removeBtns.forEach(function(removeBtn){
+        removeBtn.addEventListener('click', function(e){
+            e.target.parentElement.parentElement.remove();
+        })
+    })
+
+
+
 
     }
+
+
+  
 })
 
 
@@ -90,3 +114,6 @@ exitCartBtn.addEventListener('click', function(){
     shoppingCart.classList.remove('active');
     cover.style.display = 'none';
 })
+
+//remove item from cart
+
