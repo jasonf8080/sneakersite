@@ -1099,6 +1099,7 @@ body{
   justify-content: center;
   cursor: pointer;
   transition: 0.5s;
+  font-size: 1rem;
  }
 
 
@@ -1200,6 +1201,10 @@ body{
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+}
+
+.exit-price i{
+  cursor: pointer;
 }
 
 .exit-price p{
@@ -1326,6 +1331,13 @@ body{
     margin-bottom: 2.2em;
   }
 
+  .shop-section-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 85%;
+    row-gap: 35px;
+    margin: 0 auto;
+}
 
   .shop-options-grid{
     grid-template-columns: 1fr;
