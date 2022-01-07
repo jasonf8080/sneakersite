@@ -1372,6 +1372,15 @@ body{
   margin-bottom: 2rem;
 }
 
-
+.media-feed-grid{
+  
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%;
+    column-gap: 10px;
+    row-gap: 10px;
+    padding: 10px;
+    margin: 0 auto;
+}
 
 }
