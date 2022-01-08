@@ -198,9 +198,55 @@ const sneakers = [
     {
         image: 'sneaker-img20.png',
         brand: 'jordan',
-        title: 'jordan Air Force 1',
+        title: 'jordan Air Force 2',
         price: '$120',
     },
+
+
+    {
+        image: 'yeezy33.png',
+        brand: 'yeezy',
+        title: 'yeezy Air Force 1',
+        price: '$120',
+    },
+
+    {
+        image: 'yeezy31.png',
+        brand: 'yeezy',
+        title: 'yeezy Air Force 1',
+        price: '$120',
+    },
+
+    {
+        image: 'yeezy32.png',
+        brand: 'yeezy',
+        title: 'yeezy Air Force 1',
+        price: '$120',
+    },
+
+    
+
+    {
+        image: 'yeezy34.png',
+        brand: 'yeezy',
+        title: 'yeezy Air Force 1',
+        price: '$120',
+    },
+
+    {
+        image: 'yeezy30.png',
+        brand: 'yeezy',
+        title: 'yeezy Air Force 1',
+        price: '$120',
+    },
+
+    {
+        image: 'yeezy36.png',
+        brand: 'yeezy',
+        title: 'yeezy Air Force 1',
+        price: '$120',
+    },
+
 ];
 
 
