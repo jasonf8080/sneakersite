@@ -87,3 +87,16 @@
   .card{
       opacity: 1;
   }
+
+
+  @media(max-width: 590px){
+
+    .category-header{
+        height: 50vh;
+        max-height: 50vh;
+    }
+
+    body{
+      font-size: 10px;
+    }
+  }
