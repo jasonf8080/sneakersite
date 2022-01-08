@@ -1338,9 +1338,9 @@ body{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     max-width: 100%;
-    column-gap: 2px;
-    row-gap: 2px;
-    padding: 2px;
+    column-gap: 1px;
+    row-gap: 1px;
+    padding: 1px;
     margin: 0 auto;
 }
 
