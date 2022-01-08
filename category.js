@@ -254,10 +254,13 @@ const sneakers = [
 const categoryID = localStorage.getItem('categoryID');
 
 function updateHeaderInfo(){
+
     const headerText = document.querySelector('.category-header h1');
     const headerImg = document.querySelector('.category-header');
+    const allResults = document.querySelector('.all-results');
 
     headerText.textContent = categoryID;
+    allResults.textContent = `showing all results for "${categoryID}"`;
 
     for(let i = 0; i < brandHeaderInfo.length; i++){
         const brandHeaderItem = brandHeaderInfo[i];
