@@ -65,123 +65,7 @@
 /*giveaway*/
 
 
-.giveaway-container{
-  background: rgba(255, 255, 255, 0.7);
-  max-height: 100vh;
-  min-height: 100vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 999;
-  opacity: 0;
-  transition: 0.5s ease;
-}
 
-.giveaway{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: black;
-  max-width: 40%;
-  color: white;
-  box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.3);
-  position: relative;
-  background: white;
-  color: black;
-  border: 2px solid black;
-}
-
-.giveaway img{
-  max-width: 100%;
-  min-width: 100%;
-  height: auto;
-}
-
-.countdown{ 
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background: black;
-  color: white;
-}
-
-.countdown-item{
-  min-width: 25%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: black;
-  color: white;
- padding: 0.5em 0;
- 
-}
-
-.giveaway-content{
-  padding: 1.8em 0;
-  max-width: 85%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.giveaway-content input{
-  margin: 1.2em 0;
-  width: 80%;
-  padding: 1em;
-  border-radius: 2px;
-  border: none;
-  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.3);
-}
-
-.send-email-btn{
-  background: black;
-  text-transform: uppercase;
-  padding: 0.5em 1.5em;
-  color: white;
-  border: none;
-  border-radius: 2px;
-  font-family: 'Bebas Neue', cursive;
-  letter-spacing: 1px;
-  font-size: 1.2em;
-  cursor: pointer;
-  width: 60%;
-}
-
-.countdown-item h4{
-  font-size: 1.2em;
-}
-
-
-
-.countdown-item p{
-  letter-spacing: 2px;
-  font-size: 1em;
-}
-
-.exit-giveaway{
-  position: absolute;
-  top: -2em;
-  right: -2em;
-  background: black;
-  border: 1px solid white;
-  padding: 0.7em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.exit-giveaway i{
-  color: white;
-  font-size: 1em;
-  font-weight: bold;
-  cursor: pointer;
-}
 
 
 /*card clicked*/
@@ -394,6 +278,7 @@ body{
 .fixed-nav-container{
  z-index: 999;
  width: 100%;
+border-bottom: 1px solid white;
 }
 
 
