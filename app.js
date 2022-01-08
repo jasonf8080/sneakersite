@@ -1,7 +1,204 @@
-//giveaway
+const sneakers = [
+    {
+        trending: true,
+        image: 'sneaker-img1.png',
+        brand: 'Nike',
+        title: 'Nike Air Force 1',
+        price: '$120',
+    },
+
+    {
+        trending: true,
+        image: 'sneaker-img2.png',
+        brand: 'Jordan',
+        title: 'Nike Air Force 1',
+        price: '$120',
+    },
+
+    {
+        trending: true,
+        image: 'sneaker-img3.png',
+        brand: 'Yeezy',
+        title: 'Nike Air Force 1',
+        price: '$120',
+    },
+
+    {
+        trending: true,
+        image: 'sneaker-img4.png',
+        brand: 'Nike',
+        title: 'Nike Air Force 1',
+        price: '$120',
+    },
+
+    {
+        trending: true,
+        image: 'sneaker-img5.png',
+        brand: 'Yeezy',
+        title: 'Nike Air Force 1',
+        price: '$120',
+    },
+
+    {
+        trending: true,
+        image: 'sneaker-img6.png',
+        brand: 'Nike',
+        title: 'Nike Air Force 1',
+        price: '$120',
+    },
+
+    {
+        trending: true,
+        image: 'sneaker-img7.png',
+        brand: 'Nike',
+        title: 'Nike Air Force 1',
+        price: '$120',
+    },
+
+    {
+        trending: true,
+        image: 'sneaker-img8.png',
+        brand: 'Nike',
+        title: 'Nike Air Force 1',
+        price: '$120',
+    },
+
+    {
+        trending: true,
+        image: 'sneaker-img24.png',
+        brand: 'Nike',
+        title: 'Nike Air Force 1',
+        price: '$120',
+    },
+
+    {
+        trending: true,
+        image: 'sneaker-img15.png',
+        brand: 'Nike',
+        title: 'Nike Air Force 1',
+        price: '$120',
+    },
+
+    {
+        trending: true,
+        image: 'sneaker-img11.png',
+        brand: 'Nike',
+        title: 'Nike Air Force 1',
+        price: '$120',
+    },
+
+    {
+        trending: true,
+        image: 'sneaker-img12.png',
+        brand: 'Nike',
+        title: 'Nike Air Force 1',
+        price: '$120',
+    },
+
+    {
+        trending: true,
+        image: 'sneaker-img13.png',
+        brand: 'Nike',
+        title: 'Nike Air Force 1',
+        price: '$120',
+    },
+
+    {
+        trending: true,
+        image: 'sneaker-img14.png',
+        brand: 'Nike',
+        title: 'Nike Air Force 1',
+        price: '$120',
+    },
+
+    {
+        trending: true,
+        image: 'sneaker-img10.png',
+        brand: 'Nike',
+        title: 'Nike Air Force 1',
+        price: '$120',
+    },
+
+    {
+        trending: true,
+        image: 'sneaker-img9.png',
+        brand: 'Nike',
+        title: 'Nike Air Force 1',
+        price: '$120',
+    },
+
+    {
+        trending: true,
+        image: 'sneaker-img19.png',
+        brand: 'Nike',
+        title: 'Nike Air Force 1',
+        price: '$120',
+    },
+
+    {
+        trending: true,
+        image: 'sneaker-img20.png',
+        brand: 'Nike',
+        title: 'Nike Air Force 1',
+        price: '$120',
+    },
+];
+const trendingSneakersGrid = document.querySelector('.shop-section-grid');
+
+window.addEventListener('DOMContentLoaded', function(){
+    addSneakersToDOM();
+})
+
+function addSneakersToDOM(){
+    let trendingSneakers = []
+    for(let i = 0; i < sneakers.length; i++){
+        if(sneakers[i].trending === true){
+            trendingSneakers.push(sneakers[i]);
+        }
+        
+    }
+    let trendingSneakersContent = trendingSneakers.map(trendingSneaker => `
+    <div class="card">
+        <img class="img" src="${trendingSneaker.image}">
+        <div class="info">
+            <p>${trendingSneaker.brand}</p>
+            <h2>${trendingSneaker.title}</h2>
+            <p>$${trendingSneaker.price}</p>
+        </div>
+
+        <a href="index3.html" class="clickable-card"></a>
+    </div>
+    `).join('');
+    console.log(trendingSneakersContent);
+    trendingSneakersGrid.innerHTML = trendingSneakersContent;
+
+    fadeInSneakers();
+
+}
+
+function fadeInSneakers(){
+    const shopOptions = {
+        threshold: 0.4 //how much the object is revealed, so when 100% of the object is revealed
+    };
 
 
+    const shopItemsObserver = new IntersectionObserver(function(entries, shopItemsObserver){
+        entries.forEach(function(entry){
+            if(entry.isIntersecting){
+                entry.target.classList.add('visible');
+                //console.log(entry.target)
+            } else {
+                entry.target.classList.remove('visible');
+            }
+        })
+    }, shopOptions)
 
+    const cards = document.querySelectorAll('.card');
+
+    cards.forEach(function(card){
+        shopItemsObserver.observe(card);
+    });
+}
 
 //make nav fixed
 const nav = document.querySelector('.fixed-nav-container');
@@ -230,31 +427,32 @@ upcomingReleases.forEach(function(upcomingRelease){
 
 
 
+function show(){
+    const shopOptions = {
+        threshold: 0.4 //how much the object is revealed, so when 100% of the object is revealed
+    };
+
+
+    const shopItemsObserver = new IntersectionObserver(function(entries, shopItemsObserver){
+        entries.forEach(function(entry){
+            if(entry.isIntersecting){
+                entry.target.classList.add('visible');
+                //console.log(entry.target)
+            } else {
+                entry.target.classList.remove('visible');
+            }
+        })
+    }, shopOptions)
+
+    const cards = document.querySelectorAll('.card');
+
+    cards.forEach(function(card){
+        shopItemsObserver.observe(card);
+    });
+}
 
 
 
-
-const shopOptions = {
-    threshold: 0.4 //how much the object is revealed, so when 100% of the object is revealed
-};
-
-
-const shopItemsObserver = new IntersectionObserver(function(entries, shopItemsObserver){
-    entries.forEach(function(entry){
-        if(entry.isIntersecting){
-            entry.target.classList.add('visible');
-            //console.log(entry.target)
-        } else {
-            entry.target.classList.remove('visible');
-        }
-    })
-}, shopOptions)
-
-const cards = document.querySelectorAll('.card');
-
-cards.forEach(function(card){
-    shopItemsObserver.observe(card);
-});
 
 
 
