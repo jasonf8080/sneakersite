@@ -1333,6 +1333,7 @@ body{
     margin-bottom: 2.2em;
   }
 
+
   .shop-section-grid{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1354,6 +1355,8 @@ body{
 
   .shop-options-grid{
     grid-template-columns: 1fr;
+    max-width: 95%;
+  
   }
 
   .shop-option-item img{
