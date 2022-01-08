@@ -1337,10 +1337,16 @@ body{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     max-width: 100%;
-    column-gap: 10px;
-    row-gap: 10px;
-    padding: 10px;
+    column-gap: 2px;
+    row-gap: 2px;
+    padding: 2px;
     margin: 0 auto;
+}
+
+
+
+.card:hover{
+  transform: translateY(0px);
 }
 
   .shop-options-grid{
