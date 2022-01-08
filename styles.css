@@ -1338,13 +1338,17 @@ body{
   }
 
 
-  .shop-section-grid{
+  .shop-section-grid, .shop-options-grid{
     grid-template-columns: repeat(2, 1fr);
     max-width: 100%;
     column-gap: 2px;
     row-gap: 2px;
     padding: 2px;
     margin: 0 auto;
+}
+
+.shop-options-grid{
+  row-gap: 20px;
 }
 
 .card{
@@ -1356,19 +1360,15 @@ body{
   transform: translateY(0px);
 }
 
-  .shop-options-grid{
-    grid-template-columns: 1fr;
-    max-width: 90%;
-  
-  }
+
 
   .shop-option-item img{
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.5em;
   }
 
   .shop-option-item a{
     padding: 0.5rem 1.75rem;
-    font-size: 1.2rem;
+    font-size: 1.2em;
   }
 
   
@@ -1390,7 +1390,6 @@ body{
 }
 
 .media-feed-grid{
-  
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     max-width: 100%;
