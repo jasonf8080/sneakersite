@@ -270,6 +270,8 @@ function updateHeaderInfo(){
         }
     }
 }
+
+
 const shopSectionGrid = document.querySelector('.shop-section-grid');
 
 function filterSneakerByCategory(){
@@ -295,8 +297,35 @@ function filterSneakerByCategory(){
    
     shopSectionGrid.innerHTML = categorySneakersContent;
 
+
+    clickOnCards();
 }
 
+function clickOnCards(){
+    const clickableCards = document.querySelectorAll('.clickable-card');
+    console.log(clickableCards);
+
+    const cart = document.querySelector('.shopping-cart');
+    const selectedSneaker = document.querySelector('.selected-sneaker');
+
+
+
+    clickableCards.forEach(function(item){
+        item.addEventListener('click', function(e){
+            console.log(e.target);
+            const selectedSneaker = e.target.previousElementSibling.previousElementSibling.src;
+            const selectedBrand = e.target.previousElementSibling.children[0].textContent;
+            const selectedTitle = e.target.previousElementSibling.children[1].textContent;
+            const selectedPrice = e.target.previousElementSibling.children[2].textContent;
+    
+            localStorage.setItem('image', selectedSneaker);
+            localStorage.setItem('brand', selectedBrand);
+            localStorage.setItem('title', selectedTitle);
+            localStorage.setItem('price', selectedPrice);
+            
+        })
+    })
+}
 
 
 window.addEventListener('DOMContentLoaded', function(){

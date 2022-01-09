@@ -182,6 +182,7 @@ const trendingSneakersGrid = document.querySelector('.shop-section-grid');
 
 window.addEventListener('DOMContentLoaded', function(){
     addSneakersToDOM();
+    
 })
 
 function addSneakersToDOM(){
@@ -208,7 +209,35 @@ function addSneakersToDOM(){
     trendingSneakersGrid.innerHTML = trendingSneakersContent;
 
     fadeInSneakers();
+    
+    
+    clickOnCards();
+}
 
+function clickOnCards(){
+    const clickableCards = document.querySelectorAll('.clickable-card');
+    console.log(clickableCards);
+
+    const cart = document.querySelector('.shopping-cart');
+    const selectedSneaker = document.querySelector('.selected-sneaker');
+
+
+
+    clickableCards.forEach(function(item){
+        item.addEventListener('click', function(e){
+            console.log(e.target);
+            const selectedSneaker = e.target.previousElementSibling.previousElementSibling.src;
+            const selectedBrand = e.target.previousElementSibling.children[0].textContent;
+            const selectedTitle = e.target.previousElementSibling.children[1].textContent;
+            const selectedPrice = e.target.previousElementSibling.children[2].textContent;
+    
+            localStorage.setItem('image', selectedSneaker);
+            localStorage.setItem('brand', selectedBrand);
+            localStorage.setItem('title', selectedTitle);
+            localStorage.setItem('price', selectedPrice);
+            
+        })
+    })
 }
 
 function fadeInSneakers(){
@@ -233,6 +262,7 @@ function fadeInSneakers(){
     cards.forEach(function(card){
         shopItemsObserver.observe(card);
     });
+    
 }
 
 //make nav fixed
@@ -247,40 +277,7 @@ window.addEventListener('scroll', function(){
     }
 })
 
-//Make nav fixed
-/*const nav = document.querySelector('.nav');
-navHeight = nav.getBoundingClientRect().height;
 
-window.addEventListener('scroll', function(){
-    
-    //console.log(navHeight);
-
-    if(pageYOffset > navHeight){
-       nav.classList.add('nav-fixed');
-    } else {
-        nav.classList.remove('nav-fixed');
-    }
-})
-
-//show search bar
-const searchIcon = document.querySelector('.lni.lni-search.search-icon');
-const searchContainer = document.querySelector('.search-bar-container');
-const searchBar = document.querySelector('.search-bar');
-searchBarHeight = searchBar.getBoundingClientRect().height;
-
-searchIcon.addEventListener('click', function(e){
-    //console.log(e.target);
-    searchContainer.classList.toggle('active');
-
-    if(searchContainer.classList.contains('active')){
-        searchContainer.style.height = `${searchBarHeight}px`;
-       
-        console.log(searchBarHeight);
-    } else {
-        searchContainer.style.height = `0px`;
-    }
-});
-*/
 //access cart
 const cartIcon = document.querySelector('.lni.lni-cart');
 cartIcon.addEventListener('click', function(){
@@ -295,33 +292,7 @@ cartIcon.addEventListener('click', function(){
     }   
 })
 
-//select individual items
-const clickableCards = document.querySelectorAll('.clickable-card');
-const singleCard = document.querySelector('.card-clicked');
-const cart = document.querySelector('.shopping-cart');
-const selectedSneaker = document.querySelector('.selected-sneaker');
 
-clickableCards.forEach(function(item){
-    item.addEventListener('click', function(e){
-        const selectedSneaker = e.target.previousElementSibling.previousElementSibling.src;
-        const selectedBrand = e.target.previousElementSibling.children[0].textContent;
-        const selectedTitle = e.target.previousElementSibling.children[1].textContent;
-        const selectedPrice = e.target.previousElementSibling.children[2].textContent;
-
-        localStorage.setItem('image', selectedSneaker);
-        localStorage.setItem('brand', selectedBrand);
-        localStorage.setItem('title', selectedTitle);
-        localStorage.setItem('price', selectedPrice);
-        
-    })
-})
-
-
-
-
-
-    //pt2 --add an item to cart - from individual card
-   
           
 
            
