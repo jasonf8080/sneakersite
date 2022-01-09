@@ -25,7 +25,7 @@ const sneakers = [
 
     {
         trending: true,
-        image: 'sneaker-img4.png',
+        image: 'nike43.png',
         brand: 'Nike',
         title: 'Nike Air Force 1',
         price: '$120',
@@ -178,11 +178,12 @@ const sneakers = [
         price: '$120',
     },
 ];
+
+//dynamically add html using js objects
 const trendingSneakersGrid = document.querySelector('.shop-section-grid');
 
 window.addEventListener('DOMContentLoaded', function(){
     addSneakersToDOM();
-    
 })
 
 function addSneakersToDOM(){
@@ -209,11 +210,12 @@ function addSneakersToDOM(){
     trendingSneakersGrid.innerHTML = trendingSneakersContent;
 
     fadeInSneakers();
-    
-    
     clickOnCards();
 }
 
+
+
+//click on individual item
 function clickOnCards(){
     const clickableCards = document.querySelectorAll('.clickable-card');
     console.log(clickableCards);
@@ -240,11 +242,13 @@ function clickOnCards(){
     })
 }
 
+
+
+//lazy loading of shop items (fade-in)
 function fadeInSneakers(){
     const shopOptions = {
         threshold: 0.4 //how much the object is revealed, so when 100% of the object is revealed
     };
-
 
     const shopItemsObserver = new IntersectionObserver(function(entries, shopItemsObserver){
         entries.forEach(function(entry){
@@ -265,6 +269,12 @@ function fadeInSneakers(){
     
 }
 
+
+
+
+
+
+
 //make nav fixed
 const nav = document.querySelector('.fixed-nav-container');
 
@@ -278,7 +288,9 @@ window.addEventListener('scroll', function(){
 })
 
 
-//access cart
+
+
+//access cart when clicked on icon
 const cartIcon = document.querySelector('.lni.lni-cart');
 cartIcon.addEventListener('click', function(){
     if(cart.innerHTML === ''){
@@ -291,13 +303,6 @@ cartIcon.addEventListener('click', function(){
         }, 1000)
     }   
 })
-
-
-          
-
-           
-    
-
 
 
 

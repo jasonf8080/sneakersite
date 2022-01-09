@@ -20,7 +20,7 @@ const brandHeaderInfo = [
     },
 
 
-]
+];
 
 const sneakers = [
     {
@@ -49,7 +49,7 @@ const sneakers = [
 
     {
         trending: true,
-        image: 'sneaker-img4.png',
+        image: 'nike43.png',
         brand: 'nike',
         title: 'nike Air Force 1',
         price: '$120',
@@ -202,6 +202,45 @@ const sneakers = [
         price: '$120',
     },
 
+    {
+        image: 'nike36.png',
+        brand: 'nike',
+        title: 'jordan Air Force 2',
+        price: '$120',
+    },
+
+    {
+        image: 'nike37.png',
+        brand: 'nike',
+        title: 'jordan Air Force 2',
+        price: '$120',
+    },
+
+    {
+        image: 'nike38.png',
+        brand: 'nike',
+        title: 'jordan Air Force 2',
+        price: '$120',
+    },
+
+    
+
+    {
+        image: 'nike39.png',
+        brand: 'nike',
+        title: 'jordan Air Force 2',
+        price: '$120',
+    },
+
+   
+
+    {
+        image: 'nike40.png',
+        brand: 'nike',
+        title: 'jordan Air Force 2',
+        price: '$120',
+    },
+
 
     {
         image: 'yeezy33.png',
@@ -250,7 +289,7 @@ const sneakers = [
 ];
 
 
-
+//get category from home page, update header title, image, and results heading
 const categoryID = localStorage.getItem('categoryID');
 
 function updateHeaderInfo(){
@@ -272,9 +311,13 @@ function updateHeaderInfo(){
 }
 
 
+
+
+
+//get category from home page, filter items onto new page
 const shopSectionGrid = document.querySelector('.shop-section-grid');
 
-function filterSneakerByCategory(){
+function filterSneakersByCategory(){
     const categorySneakers = [];
     for(let i = 0; i < sneakers.length; i++){
         if(categoryID === sneakers[i].brand){
@@ -301,6 +344,10 @@ function filterSneakerByCategory(){
     clickOnCards();
 }
 
+
+
+
+//click on individual item
 function clickOnCards(){
     const clickableCards = document.querySelectorAll('.clickable-card');
     console.log(clickableCards);
@@ -328,7 +375,9 @@ function clickOnCards(){
 }
 
 
+
+//when the window loads updateHeaderInfo and filterSneakersByCategory
 window.addEventListener('DOMContentLoaded', function(){
     updateHeaderInfo();
-    filterSneakerByCategory();
+    filterSneakersByCategory();
 })
