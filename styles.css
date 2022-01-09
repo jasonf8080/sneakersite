@@ -1232,6 +1232,11 @@ border-bottom: 1px solid white;
     margin: 0 auto;
 }
 
+
+.media-feed-grid{
+  padding: 10px;
+}
+
 .shop-options-grid{
   row-gap: 20px;
 }
