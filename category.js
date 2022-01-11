@@ -6,7 +6,7 @@ const brandHeaderInfo = [
 
     {
         brand: 'jordan',
-        image: 'https://i.pinimg.com/originals/25/4f/e8/254fe85b346d59ea7d9a14d5754486b3.jpg',
+        image: 'https://www.modern-notoriety.com/wp-content/uploads/2016/07/air-jordan-1-bred_10.jpg',
     },
 
     {
@@ -16,7 +16,7 @@ const brandHeaderInfo = [
 
     {
         brand: 'adidas',
-        image: 'https://sneakernews.com/wp-content/uploads/2017/12/sneaker-con-nyc-2017-on-foot-recap-25.jpg',
+        image: 'https://sneakernews.com/wp-content/uploads/2016/07/pharrell-adidas-nmd-human-race-release-reminder-2.jpg',
     },
 
 
