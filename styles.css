@@ -228,16 +228,58 @@
 
 
 
-
-
 body{
   position: relative;
   font-size: 16px;
 }
 
 /*header*/
+.site-menu{
+  position: fixed;
+  top: 0;
+  left: -100%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  width: 70vw;
+  z-index: 999;
+  padding: 20px;
+  font-size: 1rem;
+  height: 100vh;
+  transition: all 0.5s ease;
+}
+
+.site-menu.active{
+  left: 0;
+}
+
+.exit-container, .links li{
+  margin-bottom: 1rem;
+  position: relative;
+  border-bottom: 1px solid rgb(236, 236, 236);
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
 
 
+
+.links a{
+  color: #000;
+}
+.menu-socials{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  border-top: 1px solid rgb(236, 236, 236);
+}
+
+.menu-socials > *{
+  text-align: center;
+  padding: 20px 0;
+}
 
 .fixed-nav-container{
  z-index: 999;

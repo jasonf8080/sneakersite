@@ -270,7 +270,18 @@ function fadeInSneakers(){
 }
 
 
+const menuBtn = document.querySelector('.lni.lni-menu');
+const menu = document.querySelector('.site-menu');
 
+menuBtn.addEventListener('click', function(){
+    menu.classList.add('active');
+
+    //exit menu 
+    const menuExitBtn = menu.querySelector('.exit-container i')
+    menuExitBtn.addEventListener('click', function(){
+        menu.classList.remove('active');
+    })
+})
 
 
 
