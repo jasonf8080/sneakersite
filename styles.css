@@ -1137,10 +1137,7 @@ border-bottom: 1px solid white;
 
 @media(max-width: 768px){
 
-  .nav > *{
-    flex-basis: 33%;
-    text-align: center;
-  }
+  
 
  
  .logo-container img{
@@ -1253,7 +1250,7 @@ border-bottom: 1px solid white;
   }
 
   .nav{
-    grid-template-columns: 0.5fr 2fr 1fr;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
   }
 
   .logo-container h3{
@@ -1322,7 +1319,7 @@ border-bottom: 1px solid white;
 
 .nav i{
   color: white;
-  font-size: 1.5rem;
+  font-size: 1rem;
   cursor: pointer;
   margin-right: 0.5em;
 
