@@ -719,7 +719,8 @@ border-bottom: 1px solid white;
 }
 
 .view-more-btn{
-  font-family: 'Bebas Neue', cursive;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
   background: transparent;
   color: rgb(30,30,30);
   border: 1px solid rgb(30,30,30);
@@ -1319,7 +1320,7 @@ border-bottom: 1px solid white;
   }
 
 
-  .shop-section-grid, .shop-options-grid, .media-feed-grid{ 
+  .shop-section-grid, .shop-options-grid{ 
     grid-template-columns: repeat(2, 1fr);
     max-width: 100%;
     column-gap: 2px;
@@ -1328,6 +1329,14 @@ border-bottom: 1px solid white;
     margin: 0 auto;
 }
 
+.media-feed-grid{
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 100%;
+    column-gap: 2px;
+    row-gap: 2px;
+    padding: 2px;
+    margin: 0 auto;
+}
 
 .media-feed-grid{
   padding: 10px;
