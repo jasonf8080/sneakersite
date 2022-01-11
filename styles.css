@@ -1250,8 +1250,9 @@ border-bottom: 1px solid white;
   }
 
   .nav{
-    grid-template-columns: 0.5fr 1fr 0.5fr;
+    grid-template-columns: 0.25fr 1fr 0.5fr;
   }
+
 
   .logo-container h3{
     font-size: 0.85em;
@@ -1319,7 +1320,7 @@ border-bottom: 1px solid white;
 
 .nav i{
   color: white;
-  font-size: 1rem;
+  font-size: 1.2rem;
   cursor: pointer;
   margin-right: 0.5em;
 
