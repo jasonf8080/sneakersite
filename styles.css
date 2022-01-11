@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 * {
     margin: 0;
@@ -11,9 +12,10 @@
     scroll-behavior: smooth;
   }
   body{
-    font-size: 1rem;
-    font-family: 'Bebas Neue', cursive;
+    font-size: 0.9rem;
+    font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
+    text-transform: uppercase;
    
   }
   li{
@@ -1214,7 +1216,7 @@ border-bottom: 1px solid white;
 
 .nav-logo h3{
   color: white;
-  font-size: 1rem;
+  font-size: 0.85rem;
   margin-left: 6px;
 }
 
@@ -1292,13 +1294,11 @@ border-bottom: 1px solid white;
   }
 
   .nav{
-    grid-template-columns: 0.25fr 1fr 0.5fr;
+    grid-template-columns: 0.25fr 1fr 0.4fr;
   }
 
 
-  .logo-container h3{
-    font-size: 0.85em;
-  }
+
   
   .shopping-cart{
     font-size: 13px;
