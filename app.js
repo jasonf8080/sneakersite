@@ -275,13 +275,23 @@ const menu = document.querySelector('.site-menu');
 
 menuBtn.addEventListener('click', function(){
     menu.classList.add('active');
+    displayCover();
 
     //exit menu 
     const menuExitBtn = menu.querySelector('.exit-container i')
     menuExitBtn.addEventListener('click', function(){
         menu.classList.remove('active');
+        cover.style.display = 'none';
+        
     })
 })
+
+//cover document when shop/menu is open
+const cover = document.querySelector('.cover');
+
+function displayCover(){
+    cover.style.display = 'block';
+}
 
 
 
