@@ -553,7 +553,7 @@ border-bottom: 1px solid white;
 }
 
 .shop-options{
-  margin: 4em 0;
+  margin: 4rem 0;
 }
 
 .shop-options-grid{
@@ -1312,7 +1312,13 @@ border-bottom: 1px solid white;
 
 
 @media(max-width: 590px){
-  
+  .header-slider-container, .frame{
+    height: 50vh;
+  }
+
+  .shop-options{
+    margin: 1rem 0;
+  }
 
   .nav{
     grid-template-columns: 0.25fr 1fr 0.4fr;
