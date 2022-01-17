@@ -1,7 +1,7 @@
 const sneakers = [
     {
         trending: true,
-        image: 'sneaker-img1.png',
+        image: 'sneaker1.png',
         brand: 'Nike',
         title: 'Nike Air Force 1',
         price: '$120',
@@ -9,7 +9,7 @@ const sneakers = [
 
     {
         trending: true,
-        image: 'sneaker-img2.png',
+        image: 'sneaker2.png',
         brand: 'Jordan',
         title: 'Nike Air Force 1',
         price: '$120',
@@ -17,7 +17,15 @@ const sneakers = [
 
     {
         trending: true,
-        image: 'sneaker-img3.png',
+        image: 'sneaker3.png',
+        brand: 'Nike',
+        title: 'Nike Air Force 1',
+        price: '$120',
+    },
+
+    {
+        trending: true,
+        image: 'sneaker4.png',
         brand: 'Yeezy',
         title: 'Nike Air Force 1',
         price: '$120',
@@ -25,39 +33,15 @@ const sneakers = [
 
     {
         trending: true,
-        image: 'nike43.png',
-        brand: 'Nike',
+        image: 'sneaker5.png',
+        brand: 'Adidas',
         title: 'Nike Air Force 1',
         price: '$120',
     },
 
     {
         trending: true,
-        image: 'sneaker-img5.png',
-        brand: 'Yeezy',
-        title: 'Nike Air Force 1',
-        price: '$120',
-    },
-
-    {
-        trending: true,
-        image: 'sneaker-img6.png',
-        brand: 'Nike',
-        title: 'Nike Air Force 1',
-        price: '$120',
-    },
-
-    {
-        trending: true,
-        image: 'sneaker-img7.png',
-        brand: 'Nike',
-        title: 'Nike Air Force 1',
-        price: '$120',
-    },
-
-    {
-        trending: true,
-        image: 'sneaker-img8.png',
+        image: 'sneaker6.png',
         brand: 'Jordan',
         title: 'Nike Air Force 1',
         price: '$120',
@@ -65,15 +49,31 @@ const sneakers = [
 
     {
         trending: true,
-        image: 'sneaker-img24.png',
+        image: 'sneaker7.png',
         brand: 'Yeezy',
+        title: 'Nike Air Force 1',
+        price: '$120',
+    },
+
+    {
+        trending: true,
+        image: 'sneaker8.png',
+        brand: 'Nike',
+        title: 'Nike Air Force 1',
+        price: '$120',
+    },
+
+    {
+        trending: true,
+        image: 'sneaker9.png',
+        brand: 'Jordan',
         title: 'Yeezy Air Force 1',
         price: '$120',
     },
 
     {
         trending: true,
-        image: 'sneaker-img15.png',
+        image: 'sneaker10.png',
         brand: 'Yeezy',
         title: 'Nike Air Force 1',
         price: '$120',
@@ -81,15 +81,7 @@ const sneakers = [
 
     {
         trending: true,
-        image: 'sneaker-img11.png',
-        brand: 'Jordan',
-        title: 'Nike Air Force 1',
-        price: '$120',
-    },
-
-    {
-        trending: true,
-        image: 'sneaker-img12.png',
+        image: 'sneaker11.png',
         brand: 'Nike',
         title: 'Nike Air Force 1',
         price: '$120',
@@ -97,7 +89,39 @@ const sneakers = [
 
     {
         trending: true,
-        image: 'sneaker-img13.png',
+        image: 'sneaker12.png',
+        brand: 'Adidas',
+        title: 'Nike Air Force 1',
+        price: '$120',
+    },
+
+    {
+        trending: true,
+        image: 'sneaker13.png',
+        brand: 'Jordan',
+        title: 'Nike Air Force 1',
+        price: '$120',
+    },
+
+    {
+        trending: true,
+        image: 'sneaker14.png',
+        brand: 'Yeezy',
+        title: 'Nike Air Force 1',
+        price: '$120',
+    },
+
+    {
+        trending: true,
+        image: 'sneaker15.png',
+        brand: 'Yeezy',
+        title: 'Nike Air Force 1',
+        price: '$120',
+    },
+
+    {
+        trending: true,
+        image: 'sneaker16.png',
         brand: 'Vans',
         title: 'Nike Air Force 1',
         price: '$120',
@@ -105,40 +129,16 @@ const sneakers = [
 
     {
         trending: true,
-        image: 'sneaker-img14.png',
+        image: 'sneaker17.png',
+        brand: 'Jordan',
+        title: 'Nike Air Force 1',
+        price: '$120',
+    },
+
+    {
+        trending: true,
+        image: 'sneaker18.png',
         brand: 'Nike',
-        title: 'Nike Air Force 1',
-        price: '$120',
-    },
-
-    {
-        trending: true,
-        image: 'sneaker-img10.png',
-        brand: 'Yeezy',
-        title: 'Nike Air Force 1',
-        price: '$120',
-    },
-
-    {
-        trending: true,
-        image: 'sneaker-img9.png',
-        brand: 'Yeezy',
-        title: 'Nike Air Force 1',
-        price: '$120',
-    },
-
-    {
-        trending: true,
-        image: 'sneaker-img19.png',
-        brand: 'Nike',
-        title: 'Nike Air Force 1',
-        price: '$120',
-    },
-
-    {
-        trending: true,
-        image: 'sneaker-img20.png',
-        brand: 'Adidas',
         title: 'Nike Air Force 1',
         price: '$120',
     },
@@ -179,6 +179,68 @@ const sneakers = [
     },
 ];
 
+const mediaFeedItems = [
+    {
+        image: 'https://www.kicksonfire.com/wp-content/uploads/2015/12/Boost-350-4.jpg',
+        social: 'facebook',
+    },
+
+    {
+        image: 'https://cdn.sanity.io/images/c1chvb1i/production/bbf767933d6e59c7b2bcb9a6730abba91e0226bd-700x467.jpg?rect=117,0,467,467&w=700&h=700',
+        social: 'instagram',
+    },
+
+    {
+        image: 'https://static01.nyt.com/images/2020/05/18/multimedia/18xp-jordans/merlin_172309662_16bf4886-cd40-4fe4-ac1b-8c4dba986fb7-mediumSquareAt3X.jpg',
+        social: 'facebook',
+    },
+
+    {
+        image: 'https://images.pexels.com/photos/8451911/pexels-photo-8451911.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+        social: 'twitter',
+    },
+
+    {
+        image: 'https://images.solecollector.com/images/fl_lossy,q_auto,w_910,dpr_auto/obohvnqom3s1ghi4ycgp/patta-nike-air-max-1-monarch-dh1348-001-toe',
+        social: 'instagram',
+    },
+
+    {
+        image: 'https://images.pexels.com/photos/2404959/pexels-photo-2404959.png?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+        social: 'facebook',
+    },
+
+    {
+        image: 'https://cdn.shopify.com/s/files/1/1313/3665/products/by9612_3_530x@2x.png',
+        social: 'instagram',
+    },
+
+    {
+        image: 'https://craftofmanhood.com/wp-content/uploads/2020/12/Can-a-Man-Wear-Womens-Jordans-Is-It-Weird-00.jpg',
+        social: 'facebook',
+    },
+
+    {
+        image: 'https://pbs.twimg.com/media/D-e7CnqX4AAay0y.jpg',
+        social: 'facebook',
+    },
+
+    {
+        image: 'https://i.pinimg.com/736x/bf/e5/78/bfe57848174613e4d4922c9ed3fd3df4.jpg',
+        social: 'instagram',
+    },
+
+    {
+        image: 'https://sneakerbardetroit.com/wp-content/uploads/2021/08/Nike-Air-Max-97-Cracked-Gold-DO5881-700-Release-Date-7.jpg',
+        social: 'twitter',
+    },
+
+    {
+        image: 'https://i.pinimg.com/736x/cd/ce/a0/cdcea0d74d99bced0258a0395a365535.jpg',
+        social: 'instagram',
+    }
+]
+
 //dynamically add html using js objects
 const trendingSneakersGrid = document.querySelector('.shop-section-grid');
 
@@ -212,6 +274,43 @@ function addSneakersToDOM(){
     fadeInSneakers();
     clickOnCards();
 }
+
+function dynamicMediaFeed(){
+    const mediaFeedGrid = document.querySelector('.media-feed-grid');
+
+    const dynamicMediaFeed = mediaFeedItems.map(mediaFeedItem => {
+    return ` <div class="media-img-container">
+                <img src="${mediaFeedItem.image}">
+                <i class="lni lni-${mediaFeedItem.social}"></i>
+            </div>`;
+    })
+
+    const dynamicMediaFeedContent = dynamicMediaFeed.join('');
+    mediaFeedGrid.innerHTML = dynamicMediaFeedContent;
+}
+
+dynamicMediaFeed();
+
+
+
+//Links to category pages using both: navLinks and categorySection btns;
+const categoryBtns = document.querySelectorAll('.category-btn');
+const categoryLinks = document.querySelectorAll('.links a');
+
+console.log(categoryLinks);
+
+function goToCategoryPage(links){
+    links.forEach(function(link){
+        link.addEventListener('click', function(e){
+             const categoryID = e.target.getAttribute('id');
+             localStorage.setItem('categoryID', categoryID);
+        })
+     });
+}
+
+goToCategoryPage(categoryBtns);
+goToCategoryPage(categoryLinks);
+
 
 
 
@@ -537,13 +636,5 @@ brandImgs.forEach(function(brandImg){
 })
 
 
-const categoryBtns = document.querySelectorAll('.category-btn');
 
-categoryBtns.forEach(function(categoryBtn){
-   categoryBtn.addEventListener('click', function(e){
-        const categoryID = e.target.getAttribute('id');
-        localStorage.setItem('categoryID', categoryID);
-        
-   })
 
-});
