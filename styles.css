@@ -1371,13 +1371,20 @@ border-bottom: 1px solid white;
     margin: 0 auto;
   }
 
-  .shop-section-grid, .media-feed-grid{ 
+  .shop-section-grid{ 
     grid-template-columns: repeat(2, 1fr);
     max-width: 100%;
     column-gap: 5px;
     row-gap: 5px;
     padding: 5px;
     margin: 0 auto;
+}
+
+.media-feed-grid{
+  max-width: 90%;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 5px;
+    row-gap: 5px;
 }
 
 .info{

@@ -84,7 +84,7 @@ const sneakers = [
     {
         bestSeller: true,
         image: 'sneaker7.png',
-        brand: 'eyezy',
+        brand: 'yeezy',
         title: 'Nike Air Force 1',
         price: '$120',
     },
@@ -148,7 +148,7 @@ const sneakers = [
     {
         bestSeller2: true,
         image: 'sneaker19.png',
-        brand: 'nike',
+        brand: 'vans',
         title: 'Nike Air Force 1',
         price: '$120',
     },
@@ -156,14 +156,6 @@ const sneakers = [
     {
         bestSeller2: true,
         image: 'sneaker20.png',
-        brand: 'jordan',
-        title: 'Nike Air Force 1',
-        price: '$120',
-    },
-
-    {
-        bestSeller2: true,
-        image: 'sneaker21.png',
         brand: 'nike',
         title: 'Nike Air Force 1',
         price: '$120',
@@ -171,7 +163,7 @@ const sneakers = [
 
     {
         bestSeller2: true,
-        image: 'sneaker22.png',
+        image: 'sneaker21.png',
         brand: 'yeezy',
         title: 'Nike Air Force 1',
         price: '$120',
@@ -179,7 +171,7 @@ const sneakers = [
 
     {
         bestSeller2: true,
-        image: 'sneaker23.png',
+        image: 'sneaker22.png',
         brand: 'adidas',
         title: 'Nike Air Force 1',
         price: '$120',
@@ -187,7 +179,7 @@ const sneakers = [
 
     {
         bestSeller2: true,
-        image: 'sneaker24.png',
+        image: 'sneaker23.png',
         brand: 'jordan',
         title: 'Nike Air Force 1',
         price: '$120',
@@ -195,8 +187,16 @@ const sneakers = [
 
     {
         bestSeller2: true,
+        image: 'sneaker24.png',
+        brand: 'nike',
+        title: 'Nike Air Force 1',
+        price: '$120',
+    },
+
+    {
+        bestSeller2: true,
         image: 'sneaker25.png',
-        brand: 'eyezy',
+        brand: 'adidas',
         title: 'Nike Air Force 1',
         price: '$120',
     },
@@ -212,7 +212,7 @@ const sneakers = [
     {
         bestSeller2: true,
         image: 'sneaker27.png',
-        brand: 'jordan',
+        brand: 'yeezy',
         title: 'Yeezy Air Force 1',
         price: '$120',
     },
