@@ -567,7 +567,7 @@ border-bottom: 1px solid white;
 
 .shop-options .title{
   font-size: 20px;
-  margin-bottom: 12px;
+  margin-bottom: 20px;
 }
 
 .shop-options-grid{
@@ -1326,7 +1326,8 @@ border-bottom: 1px solid white;
 
 @media(max-width: 590px){
   .header-slider-container, .frame{
-    height: 70vh;
+    height: 50vh;
+    max-height: 50vh;
   }
 
   .shop-options{
