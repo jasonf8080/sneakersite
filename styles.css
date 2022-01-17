@@ -387,6 +387,7 @@ border-bottom: 1px solid white;
   overflow: hidden;
   position: relative;
   height: 80vh;
+  border-bottom: 2px solid black;
 }
 
 .frame{
@@ -394,6 +395,7 @@ border-bottom: 1px solid white;
   align-items: center;
   transition: all 0.3s ease-in-out;
   height: 80vh;
+  border-bottom: 2px solid black;
 }
 
 .slider-item{
@@ -552,8 +554,20 @@ border-bottom: 1px solid white;
   letter-spacing: 1px;
 }
 
+
+
+
+
+
+
 .shop-options{
-  margin: 4rem 0;
+  margin: 6rem 0 4rem;
+  margin-top: 50px;
+}
+
+.shop-options .title{
+  font-size: 20px;
+  margin-bottom: 12px;
 }
 
 .shop-options-grid{
@@ -597,6 +611,7 @@ border-bottom: 1px solid white;
   z-index: 99;
   font-size: 1.2em;
   transition: all 0.5s;
+  border-radius: 5px;
 }
 
 .shop-option-item a:hover{
@@ -738,6 +753,7 @@ border-bottom: 1px solid white;
   transition: all 0.5s;
   cursor: pointer;
   margin-top: 2em;
+  border-radius: 5px;
 }
 
 .view-more-btn:hover{
@@ -872,8 +888,6 @@ border-bottom: 1px solid white;
 /*Media Feed*/
 
 .media-feed, .follow-us{
-  background: black;
-  color: rgb(255, 255, 255);
   padding: 5em 0;
   margin: 0;
 }
@@ -886,7 +900,6 @@ border-bottom: 1px solid white;
   margin: 0 auto;
   display: grid;
   max-width: 75%;
-  background: black;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 0.75em;
   row-gap: 0.75em;
@@ -1313,11 +1326,11 @@ border-bottom: 1px solid white;
 
 @media(max-width: 590px){
   .header-slider-container, .frame{
-    height: 50vh;
+    height: 70vh;
   }
 
   .shop-options{
-    margin: 1rem 0;
+    margin: 50px 0;
   }
 
   .nav{
@@ -1331,9 +1344,7 @@ border-bottom: 1px solid white;
   }
 
   
-  .frame{
-    height: 50vh;
-  }
+  
  
 
   .shopping-cart-item{
@@ -1350,13 +1361,12 @@ border-bottom: 1px solid white;
 
   .shop-options-grid{
     grid-template-columns: 1fr;
-    max-width: 100%;
+    max-width: 90%;
     row-gap: 5px;
-    padding: 10px;
     margin: 0 auto;
   }
 
-  .shop-section-grid{ 
+  .shop-section-grid, .media-feed-grid{ 
     grid-template-columns: repeat(2, 1fr);
     max-width: 100%;
     column-gap: 5px;
@@ -1380,26 +1390,13 @@ border-bottom: 1px solid white;
   margin-top: 0.5rem;
 }
 
-.media-feed-grid{
-  grid-template-columns: repeat(3, 1fr);
-  max-width: 100%;
-    column-gap: 2px;
-    row-gap: 2px;
-    padding: 2px;
-    margin: 0 auto;
-}
 
-.media-feed-grid{
-  padding: 10px;
-}
 
 .shop-options-grid{
   row-gap: 20px;
 }
 
-.card{
-  border: 1px solid white;
-}
+
 
 
 .card:hover{
