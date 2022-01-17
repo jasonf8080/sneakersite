@@ -100,7 +100,6 @@ const sneakers = [
     },
 
     {
-        bestSeller: true,
         image: 'sneaker10.png',
         brand: 'yeezy',
         title: 'Nike Air Force 1',
@@ -108,7 +107,6 @@ const sneakers = [
     },
 
     {
-        bestSeller: true,
         image: 'sneaker11.png',
         brand: 'nike',
         title: 'Nike Air Force 1',
@@ -116,7 +114,6 @@ const sneakers = [
     },
 
     {
-        bestSeller: true,
         image: 'sneaker12.png',
         brand: 'adidas',
         title: 'Nike Air Force 1',
@@ -221,7 +218,6 @@ const sneakers = [
     },
 
     {
-        bestSeller2: true,
         image: 'sneaker28.png',
         brand: 'yeezy',
         title: 'Nike Air Force 1',
@@ -229,7 +225,6 @@ const sneakers = [
     },
 
     {
-        bestSeller2: true,
         image: 'sneaker29.png',
         brand: 'nike',
         title: 'Nike Air Force 1',
@@ -237,7 +232,6 @@ const sneakers = [
     },
 
     {
-        bestSeller2: true,
         image: 'sneaker30.png',
         brand: 'adidas',
         title: 'Nike Air Force 1',
