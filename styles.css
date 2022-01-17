@@ -40,6 +40,7 @@
     font-size: 1.25em;
   }
 
+
   section{
     margin: 8em 0;
   }
@@ -659,7 +660,7 @@ border-bottom: 1px solid white;
 .card{
     display: flex;
     flex-direction: column;
-    
+    border-radius: 5px;
     max-width: 100%;
     color: white;
     cursor: pointer;
@@ -667,6 +668,7 @@ border-bottom: 1px solid white;
     transition: all 0.75s;
     opacity: 0;
     background: rgb(0,0,0);
+    border: none;
 }
 
 .card.visible{
@@ -688,12 +690,12 @@ border-bottom: 1px solid white;
     max-width: 100%;
     min-width: 100%;
     height: auto;
-   border-bottom: 1px solid rgb(158, 158, 158);
-    
+   border-top-left-radius: 5px;
+   border-top-right-radius: 5px;
 }
 
 .info{
-  padding: 1em 0;
+  padding: 1rem 0;
 }
 
 .info > *{
@@ -709,6 +711,8 @@ border-bottom: 1px solid white;
   width: 100%;
   background: transparent;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+
 }
 
 .card:hover{
@@ -1238,6 +1242,20 @@ border-bottom: 1px solid white;
     margin: 0 auto;
 }
 
+.info{
+  padding: 12px 0;
+}
+
+
+.card h2{
+  font-size: 1rem;
+  font-weight: lighter;
+}
+
+.card p{
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+}
 
 .image-info-flex{
   max-width: 85%;
@@ -1294,14 +1312,11 @@ border-bottom: 1px solid white;
 
 
 @media(max-width: 590px){
-  body{
-    font-size: 10px;
-  }
+  
 
   .nav{
     grid-template-columns: 0.25fr 1fr 0.4fr;
   }
-
 
 
   
@@ -1323,14 +1338,32 @@ border-bottom: 1px solid white;
     margin-bottom: 2.2em;
   }
 
+  .shop-section h2{
+    font-size: 1rem;
+  }
 
   .shop-section-grid, .shop-options-grid{ 
     grid-template-columns: repeat(2, 1fr);
     max-width: 100%;
-    column-gap: 2px;
-    row-gap: 2px;
-    padding: 2px;
+    column-gap: 5px;
+    row-gap: 5px;
+    padding: 5px;
     margin: 0 auto;
+}
+
+.info{
+  padding: 12px 0;
+}
+
+
+.card h2{
+  font-size: 0.85rem;
+  font-weight: lighter;
+}
+
+.card p{
+  font-size: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 .media-feed-grid{
