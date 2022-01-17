@@ -1,182 +1,249 @@
 const sneakers = [
     {
-        trending: true,
+        bestSeller: true,
         image: 'sneaker1.png',
-        brand: 'Nike',
+        brand: 'nike',
         title: 'Nike Air Force 1',
         price: '$120',
     },
 
     {
-        trending: true,
+        bestSeller: true,
         image: 'sneaker2.png',
-        brand: 'Jordan',
+        brand: 'jordan',
         title: 'Nike Air Force 1',
         price: '$120',
     },
 
     {
-        trending: true,
+        bestSeller: true,
         image: 'sneaker3.png',
-        brand: 'Nike',
+        brand: 'nike',
         title: 'Nike Air Force 1',
         price: '$120',
     },
 
+
     {
-        trending: true,
+        bestSeller: true,
         image: 'sneaker4.png',
-        brand: 'Yeezy',
+        brand: 'yeezy',
         title: 'Nike Air Force 1',
         price: '$120',
     },
 
     {
-        trending: true,
+        bestSeller: true,
         image: 'sneaker5.png',
-        brand: 'Adidas',
+        brand: 'adidas',
         title: 'Nike Air Force 1',
         price: '$120',
     },
 
     {
-        trending: true,
+        bestSeller: true,
         image: 'sneaker6.png',
-        brand: 'Jordan',
+        brand: 'jordan',
+        title: 'Nike Air Force 1',
+        price: '$120',
+    },
+
+
+    {
+        bestSeller: true,
+        image: 'sneaker13.png',
+        brand: 'jordan',
         title: 'Nike Air Force 1',
         price: '$120',
     },
 
     {
-        trending: true,
-        image: 'sneaker7.png',
-        brand: 'Yeezy',
+        bestSeller: true,
+        image: 'sneaker14.png',
+        brand: 'yeezy',
         title: 'Nike Air Force 1',
         price: '$120',
     },
 
     {
-        trending: true,
+        bestSeller: true,
+        image: 'sneaker15.png',
+        brand: 'yeezy',
+        title: 'Nike Air Force 1',
+        price: '$120',
+    },
+
+    {
+        bestSeller: true,
         image: 'sneaker8.png',
-        brand: 'Nike',
+        brand: 'nike',
         title: 'Nike Air Force 1',
         price: '$120',
     },
 
     {
-        trending: true,
+        bestSeller: true,
+        image: 'sneaker7.png',
+        brand: 'eyezy',
+        title: 'Nike Air Force 1',
+        price: '$120',
+    },
+
+   
+
+    {
+        bestSeller: true,
         image: 'sneaker9.png',
-        brand: 'Jordan',
+        brand: 'jordan',
         title: 'Yeezy Air Force 1',
         price: '$120',
     },
 
     {
-        trending: true,
+        bestSeller: true,
         image: 'sneaker10.png',
-        brand: 'Yeezy',
+        brand: 'yeezy',
         title: 'Nike Air Force 1',
         price: '$120',
     },
 
     {
-        trending: true,
+        bestSeller: true,
         image: 'sneaker11.png',
-        brand: 'Nike',
+        brand: 'nike',
         title: 'Nike Air Force 1',
         price: '$120',
     },
 
     {
-        trending: true,
+        bestSeller: true,
         image: 'sneaker12.png',
-        brand: 'Adidas',
+        brand: 'adidas',
         title: 'Nike Air Force 1',
         price: '$120',
     },
 
-    {
-        trending: true,
-        image: 'sneaker13.png',
-        brand: 'Jordan',
-        title: 'Nike Air Force 1',
-        price: '$120',
-    },
 
     {
-        trending: true,
-        image: 'sneaker14.png',
-        brand: 'Yeezy',
-        title: 'Nike Air Force 1',
-        price: '$120',
-    },
-
-    {
-        trending: true,
-        image: 'sneaker15.png',
-        brand: 'Yeezy',
-        title: 'Nike Air Force 1',
-        price: '$120',
-    },
-
-    {
-        trending: true,
+        bestSeller2: true,
         image: 'sneaker16.png',
-        brand: 'Vans',
+        brand: 'vans',
         title: 'Nike Air Force 1',
         price: '$120',
     },
 
     {
-        trending: true,
+        bestSeller2: true,
         image: 'sneaker17.png',
-        brand: 'Jordan',
+        brand: 'jordan',
         title: 'Nike Air Force 1',
         price: '$120',
     },
 
     {
-        trending: true,
+        bestSeller2: true,
         image: 'sneaker18.png',
-        brand: 'Nike',
+        brand: 'nike',
         title: 'Nike Air Force 1',
         price: '$120',
     },
 
     {
-        image: 'sneaker-img20.png',
-        brand: 'Jordan',
-        title: 'Jordan Air Force 1',
+        bestSeller2: true,
+        image: 'sneaker19.png',
+        brand: 'nike',
+        title: 'Nike Air Force 1',
         price: '$120',
     },
 
     {
-        image: 'sneaker-img20.png',
-        brand: 'Jordan',
-        title: 'Jordan Air Force 1',
+        bestSeller2: true,
+        image: 'sneaker20.png',
+        brand: 'jordan',
+        title: 'Nike Air Force 1',
         price: '$120',
     },
 
     {
-        image: 'sneaker-img20.png',
-        brand: 'Jordan',
-        title: 'Jordan Air Force 1',
+        bestSeller2: true,
+        image: 'sneaker21.png',
+        brand: 'nike',
+        title: 'Nike Air Force 1',
         price: '$120',
     },
 
     {
-        image: 'sneaker-img20.png',
-        brand: 'Jordan',
-        title: 'Jordan Air Force 1',
+        bestSeller2: true,
+        image: 'sneaker22.png',
+        brand: 'yeezy',
+        title: 'Nike Air Force 1',
         price: '$120',
     },
 
     {
-        image: 'sneaker-img20.png',
-        brand: 'Jordan',
-        title: 'Jordan Air Force 1',
+        bestSeller2: true,
+        image: 'sneaker23.png',
+        brand: 'adidas',
+        title: 'Nike Air Force 1',
         price: '$120',
     },
+
+    {
+        bestSeller2: true,
+        image: 'sneaker24.png',
+        brand: 'jordan',
+        title: 'Nike Air Force 1',
+        price: '$120',
+    },
+
+    {
+        bestSeller2: true,
+        image: 'sneaker25.png',
+        brand: 'eyezy',
+        title: 'Nike Air Force 1',
+        price: '$120',
+    },
+
+    {
+        bestSeller2: true,
+        image: 'sneaker26.png',
+        brand: 'nike',
+        title: 'Nike Air Force 1',
+        price: '$120',
+    },
+
+    {
+        bestSeller2: true,
+        image: 'sneaker27.png',
+        brand: 'jordan',
+        title: 'Yeezy Air Force 1',
+        price: '$120',
+    },
+
+    {
+        bestSeller2: true,
+        image: 'sneaker28.png',
+        brand: 'yeezy',
+        title: 'Nike Air Force 1',
+        price: '$120',
+    },
+
+    {
+        bestSeller2: true,
+        image: 'sneaker29.png',
+        brand: 'nike',
+        title: 'Nike Air Force 1',
+        price: '$120',
+    },
+
+    {
+        bestSeller2: true,
+        image: 'sneaker30.png',
+        brand: 'adidas',
+        title: 'Nike Air Force 1',
+        price: '$120',
+    },
+
 ];
 
 const mediaFeedItems = [
@@ -242,34 +309,34 @@ const mediaFeedItems = [
 ]
 
 //dynamically add html using js objects
-const trendingSneakersGrid = document.querySelector('.shop-section-grid');
+const bestSellerSneakersGrid = document.querySelector('.shop-section-grid');
 
 window.addEventListener('DOMContentLoaded', function(){
     addSneakersToDOM();
 })
 
 function addSneakersToDOM(){
-    let trendingSneakers = []
+    let bestSellerSneakers = []
     for(let i = 0; i < sneakers.length; i++){
-        if(sneakers[i].trending === true){
-            trendingSneakers.push(sneakers[i]);
+        if(sneakers[i].bestSeller === true){
+            bestSellerSneakers.push(sneakers[i]);
         }
-        
     }
-    let trendingSneakersContent = trendingSneakers.map(trendingSneaker => `
+
+    let bestSellerSneakersContent = bestSellerSneakers.map(bestSellerSneaker => `
     <div class="card">
-        <img class="img" src="${trendingSneaker.image}">
+        <img class="img" src="${bestSellerSneaker.image}">
         <div class="info">
-            <p>${trendingSneaker.brand}</p>
-            <h2>${trendingSneaker.title}</h2>
-            <p>$${trendingSneaker.price}</p>
+            <p>${bestSellerSneaker.brand}</p>
+            <h2>${bestSellerSneaker.title}</h2>
+            <p>$${bestSellerSneaker.price}</p>
         </div>
 
         <a href="index3.html" class="clickable-card"></a>
     </div>
     `).join('');
     
-    trendingSneakersGrid.innerHTML = trendingSneakersContent;
+    bestSellerSneakersGrid.innerHTML = bestSellerSneakersContent;
 
     fadeInSneakers();
     clickOnCards();
@@ -278,15 +345,13 @@ function addSneakersToDOM(){
 function dynamicMediaFeed(){
     const mediaFeedGrid = document.querySelector('.media-feed-grid');
 
-    const dynamicMediaFeed = mediaFeedItems.map(mediaFeedItem => {
-    return ` <div class="media-img-container">
-                <img src="${mediaFeedItem.image}">
-                <i class="lni lni-${mediaFeedItem.social}"></i>
-            </div>`;
-    })
-
-    const dynamicMediaFeedContent = dynamicMediaFeed.join('');
-    mediaFeedGrid.innerHTML = dynamicMediaFeedContent;
+    let dynamicMediaFeed = mediaFeedItems.map(mediaFeedItem => `
+        <div class="media-img-container">
+            <img src="${mediaFeedItem.image}">
+            <i class="lni lni-${mediaFeedItem.social}"></i>
+        </div>`).join('');
+    
+    mediaFeedGrid.innerHTML = dynamicMediaFeed;
 }
 
 dynamicMediaFeed();
@@ -480,40 +545,52 @@ setInterval(function(){
 const viewMoreBtn = document.querySelector('.view-more-btn');
 const loaderContainer = document.querySelector('.loader-container');
 const loader = document.querySelector('.loader-container i');
-
+const firstShopSection = document.querySelector('.shop-section-grid');
+const nextShopSection = document.querySelector('.shop-section-grid2');
 
 viewMoreBtn.addEventListener('click', function(e){
-    e.target.parentElement.remove();//removing the btn-container
+    const btnContainer = e.target.parentElement;
+    btnContainer.style.display = 'none'; //removing the btn-container
     loaderContainer.classList.add('active');//display loader
 
-    const firstShopSection = document.querySelector('.shop-section-grid');
-    firstShopSection.style.marginbottom = '0px';
-
     setTimeout(function(){
-        loaderContainer.classList.remove('active');
+        loaderContainer.remove();
+        firstShopSection.style.marginbottom = '0px';
+        nextShopSection.classList.add('active');
+
+        viewMoreBestSellers();
     }, 2400) //after 2.4 seconds remove loader animation
 
-    const nextShopSection = document.querySelector('.shop-section-grid2');
-   
-    setTimeout(function(){
-        nextShopSection.style.display = 'grid';
-    }, 2400) //unhide the hidden section
-
-    
 
 })
 
-/*const backToTopBtn = document.querySelector('.back-to-top-btn');
+function viewMoreBestSellers(){
+    let bestSellers2 = [];
+    for(let i = 0; i < sneakers.length; i++){
+        if(sneakers[i].bestSeller2 === true){
+            bestSellers2.push(sneakers[i]);
+        }
+    }
+     
+   let bestSellers2Content = bestSellers2.map(bestSeller2 => `
+   <div class="card">
+        <img class="img" src="${bestSeller2.image}">
+        <div class="info">
+            <p>${bestSeller2.brand}</p>
+            <h2>${bestSeller2.title}</h2>
+            <p>$${bestSeller2.price}</p>
+        </div>
 
-window.addEventListener('scroll', function(){
-    if(pageYOffset > 3300){
-        backToTopBtn.classList.add('active');
-    } else {
-        backToTopBtn.classList.remove('active');
-    };
-})*/
+        <a href="index3.html" class="clickable-card"></a>
+    </div>
+   `).join('');
 
 
+   nextShopSection.innerHTML = bestSellers2Content;
+   fadeInSneakers();
+    clickOnCards();
+
+}
 
 
 //show upcoming releases

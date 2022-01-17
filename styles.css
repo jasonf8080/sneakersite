@@ -409,7 +409,7 @@ border-bottom: 1px solid white;
 }
 
 .slider-item:nth-child(2){
-  background: url("https://i.pinimg.com/736x/5e/58/f5/5e58f5c86d0571e00a02123e628cc394.jpg") no-repeat center/cover;
+  background: url("https://www.sportvision.group/public/images/upload/articles/nike-air-jordan/photo_1a.jpg") no-repeat center/cover;
 }
 
 
@@ -788,6 +788,10 @@ border-bottom: 1px solid white;
 
 .shop-section-grid2{
   display: none;
+}
+
+.shop-section-grid2.active{
+  display: grid;
 }
 
 /*back to top btn*/

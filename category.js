@@ -24,269 +24,252 @@ const brandHeaderInfo = [
 
 const sneakers = [
     {
-        trending: true,
-        image: 'sneaker-img1.png',
+        bestSeller: true,
+        image: 'sneaker1.png',
         brand: 'nike',
-        title: 'nike Air Force 1',
+        title: 'Nike Air Force 1',
         price: '$120',
     },
 
     {
-        trending: true,
-        image: 'sneaker-img2.png',
+        bestSeller: true,
+        image: 'sneaker2.png',
         brand: 'jordan',
-        title: 'nike Air Force 1',
+        title: 'Nike Air Force 1',
         price: '$120',
     },
 
     {
-        trending: true,
-        image: 'sneaker-img3.png',
-        brand: 'yeezy',
-        title: 'nike Air Force 1',
-        price: '$120',
-    },
-
-    {
-        trending: true,
-        image: 'nike43.png',
+        bestSeller: true,
+        image: 'sneaker3.png',
         brand: 'nike',
-        title: 'nike Air Force 1',
+        title: 'Nike Air Force 1',
         price: '$120',
     },
 
+
     {
-        trending: true,
-        image: 'sneaker-img5.png',
+        bestSeller: true,
+        image: 'sneaker4.png',
         brand: 'yeezy',
-        title: 'nike Air Force 1',
+        title: 'Nike Air Force 1',
         price: '$120',
     },
 
     {
-        trending: true,
-        image: 'sneaker-img6.png',
-        brand: 'nike',
-        title: 'nike Air Force 1',
-        price: '$120',
-    },
-
-    {
-        trending: true,
-        image: 'sneaker-img7.png',
-        brand: 'nike',
-        title: 'nike Air Force 1',
-        price: '$120',
-    },
-
-    {
-        trending: true,
-        image: 'sneaker-img8.png',
-        brand: 'jordan',
-        title: 'nike Air Force 1',
-        price: '$120',
-    },
-
-    {
-        trending: true,
-        image: 'sneaker-img24.png',
-        brand: 'yeezy',
-        title: 'yeezy Air Force 1',
-        price: '$120',
-    },
-
-    {
-        trending: true,
-        image: 'sneaker-img15.png',
-        brand: 'yeezy',
-        title: 'nike Air Force 1',
-        price: '$120',
-    },
-
-    {
-        trending: true,
-        image: 'sneaker-img11.png',
-        brand: 'jordan',
-        title: 'nike Air Force 1',
-        price: '$120',
-    },
-
-    {
-        trending: true,
-        image: 'sneaker-img12.png',
-        brand: 'nike',
-        title: 'nike Air Force 1',
-        price: '$120',
-    },
-
-    {
-        trending: true,
-        image: 'sneaker-img13.png',
-        brand: 'Vans',
-        title: 'nike Air Force 1',
-        price: '$120',
-    },
-
-    {
-        trending: true,
-        image: 'sneaker-img14.png',
-        brand: 'nike',
-        title: 'nike Air Force 1',
-        price: '$120',
-    },
-
-    {
-        trending: true,
-        image: 'sneaker-img10.png',
-        brand: 'yeezy',
-        title: 'nike Air Force 1',
-        price: '$120',
-    },
-
-    {
-        trending: true,
-        image: 'sneaker-img9.png',
-        brand: 'yeezy',
-        title: 'nike Air Force 1',
-        price: '$120',
-    },
-
-    {
-        trending: true,
-        image: 'sneaker-img19.png',
-        brand: 'nike',
-        title: 'nike Air Force 1',
-        price: '$120',
-    },
-
-    {
-        trending: true,
-        image: 'sneaker-img20.png',
+        bestSeller: true,
+        image: 'sneaker5.png',
         brand: 'adidas',
-        title: 'nike Air Force 1',
+        title: 'Nike Air Force 1',
         price: '$120',
     },
 
     {
-        image: 'sneaker-img20.png',
+        bestSeller: true,
+        image: 'sneaker6.png',
         brand: 'jordan',
-        title: 'jordan Air Force 1',
+        title: 'Nike Air Force 1',
         price: '$120',
     },
 
+
     {
-        image: 'sneaker-img20.png',
+        bestSeller: true,
+        image: 'sneaker13.png',
         brand: 'jordan',
-        title: 'jordan Air Force 1',
+        title: 'Nike Air Force 1',
         price: '$120',
     },
 
     {
-        image: 'sneaker-img20.png',
-        brand: 'jordan',
-        title: 'jordan Air Force 1',
+        bestSeller: true,
+        image: 'sneaker14.png',
+        brand: 'yeezy',
+        title: 'Nike Air Force 1',
         price: '$120',
     },
 
     {
-        image: 'sneaker-img20.png',
-        brand: 'jordan',
-        title: 'jordan Air Force 1',
+        bestSeller: true,
+        image: 'sneaker15.png',
+        brand: 'yeezy',
+        title: 'Nike Air Force 1',
         price: '$120',
     },
 
     {
-        image: 'sneaker-img20.png',
-        brand: 'jordan',
-        title: 'jordan Air Force 2',
-        price: '$120',
-    },
-
-    {
-        image: 'nike36.png',
+        bestSeller: true,
+        image: 'sneaker8.png',
         brand: 'nike',
-        title: 'jordan Air Force 2',
+        title: 'Nike Air Force 1',
         price: '$120',
     },
 
     {
-        image: 'nike37.png',
-        brand: 'nike',
-        title: 'jordan Air Force 2',
-        price: '$120',
-    },
-
-    {
-        image: 'nike38.png',
-        brand: 'nike',
-        title: 'jordan Air Force 2',
-        price: '$120',
-    },
-
-    
-
-    {
-        image: 'nike39.png',
-        brand: 'nike',
-        title: 'jordan Air Force 2',
+        bestSeller: true,
+        image: 'sneaker7.png',
+        brand: 'eyezy',
+        title: 'Nike Air Force 1',
         price: '$120',
     },
 
    
 
     {
-        image: 'nike40.png',
+        bestSeller: true,
+        image: 'sneaker9.png',
+        brand: 'jordan',
+        title: 'Yeezy Air Force 1',
+        price: '$120',
+    },
+
+    {
+        bestSeller: true,
+        image: 'sneaker10.png',
+        brand: 'yeezy',
+        title: 'Nike Air Force 1',
+        price: '$120',
+    },
+
+    {
+        bestSeller: true,
+        image: 'sneaker11.png',
         brand: 'nike',
-        title: 'jordan Air Force 2',
+        title: 'Nike Air Force 1',
+        price: '$120',
+    },
+
+    {
+        bestSeller: true,
+        image: 'sneaker12.png',
+        brand: 'adidas',
+        title: 'Nike Air Force 1',
         price: '$120',
     },
 
 
     {
-        image: 'yeezy33.png',
-        brand: 'yeezy',
-        title: 'yeezy Air Force 1',
+        bestSeller2: true,
+        image: 'sneaker16.png',
+        brand: 'vans',
+        title: 'Nike Air Force 1',
         price: '$120',
     },
 
     {
-        image: 'yeezy31.png',
-        brand: 'yeezy',
-        title: 'yeezy Air Force 1',
+        bestSeller2: true,
+        image: 'sneaker17.png',
+        brand: 'jordan',
+        title: 'Nike Air Force 1',
         price: '$120',
     },
 
     {
-        image: 'yeezy32.png',
-        brand: 'yeezy',
-        title: 'yeezy Air Force 1',
-        price: '$120',
-    },
-
-    
-
-    {
-        image: 'yeezy34.png',
-        brand: 'yeezy',
-        title: 'yeezy Air Force 1',
+        bestSeller2: true,
+        image: 'sneaker18.png',
+        brand: 'nike',
+        title: 'Nike Air Force 1',
         price: '$120',
     },
 
     {
-        image: 'yeezy30.png',
-        brand: 'yeezy',
-        title: 'yeezy Air Force 1',
+        bestSeller2: true,
+        image: 'sneaker19.png',
+        brand: 'nike',
+        title: 'Nike Air Force 1',
         price: '$120',
     },
 
     {
-        image: 'yeezy36.png',
+        bestSeller2: true,
+        image: 'sneaker20.png',
+        brand: 'jordan',
+        title: 'Nike Air Force 1',
+        price: '$120',
+    },
+
+    {
+        bestSeller2: true,
+        image: 'sneaker21.png',
+        brand: 'nike',
+        title: 'Nike Air Force 1',
+        price: '$120',
+    },
+
+    {
+        bestSeller2: true,
+        image: 'sneaker22.png',
         brand: 'yeezy',
-        title: 'yeezy Air Force 1',
+        title: 'Nike Air Force 1',
+        price: '$120',
+    },
+
+    {
+        bestSeller2: true,
+        image: 'sneaker23.png',
+        brand: 'adidas',
+        title: 'Nike Air Force 1',
+        price: '$120',
+    },
+
+    {
+        bestSeller2: true,
+        image: 'sneaker24.png',
+        brand: 'jordan',
+        title: 'Nike Air Force 1',
+        price: '$120',
+    },
+
+    {
+        bestSeller2: true,
+        image: 'sneaker25.png',
+        brand: 'eyezy',
+        title: 'Nike Air Force 1',
+        price: '$120',
+    },
+
+    {
+        bestSeller2: true,
+        image: 'sneaker26.png',
+        brand: 'nike',
+        title: 'Nike Air Force 1',
+        price: '$120',
+    },
+
+    {
+        bestSeller2: true,
+        image: 'sneaker27.png',
+        brand: 'jordan',
+        title: 'Yeezy Air Force 1',
+        price: '$120',
+    },
+
+    {
+        bestSeller2: true,
+        image: 'sneaker28.png',
+        brand: 'yeezy',
+        title: 'Nike Air Force 1',
+        price: '$120',
+    },
+
+    {
+        bestSeller2: true,
+        image: 'sneaker29.png',
+        brand: 'nike',
+        title: 'Nike Air Force 1',
+        price: '$120',
+    },
+
+    {
+        bestSeller2: true,
+        image: 'sneaker30.png',
+        brand: 'adidas',
+        title: 'Nike Air Force 1',
         price: '$120',
     },
 
 ];
+
 
 
 //get category from home page, update header title, image, and results heading
