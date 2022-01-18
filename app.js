@@ -308,6 +308,8 @@ const shoppingCartContent = document.querySelector('.shopping-cart-content');
 shoppingCartIcon.addEventListener('click', function(){
     shiftShoppingCart();
     cover.style.display = 'block';
+
+    updateCart();
 })
 
 function shiftShoppingCart(){
@@ -320,9 +322,9 @@ function updateCart(){
     shoppingCartContent.innerHTML = cartInnerHTML;
 }
 
-setInterval(function(){
-    updateCart();
-}, 1000);
+
+ 
+
 
 const exitCartBtn = document.querySelector('.cart-title-exit i');
 

@@ -112,9 +112,9 @@ function updateCart(){
     shoppingCartContent.innerHTML = cartInnerHTML;
 }
 
-setInterval(function(){
+
     updateCart();
-}, 1000);
+
 
 function shiftShoppingCart(){
     shoppingCart.classList.add('active');
