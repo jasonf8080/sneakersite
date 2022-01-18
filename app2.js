@@ -114,7 +114,7 @@ function updateCart(){
 
 setInterval(function(){
     updateCart();
-}, 1000);
+}, 100);
 
 function shiftShoppingCart(){
     shoppingCart.classList.add('active');
