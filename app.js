@@ -4,7 +4,7 @@ const sneakers = [
         image: 'sneaker1.png',
         brand: 'nike',
         title: 'Nike Air Force 1',
-        price: '$120',
+        price: '120',
     },
 
     {
@@ -12,7 +12,7 @@ const sneakers = [
         image: 'sneaker2.png',
         brand: 'jordan',
         title: 'Nike Air Force 1',
-        price: '$120',
+        price: '490',
     },
 
     {
@@ -20,7 +20,7 @@ const sneakers = [
         image: 'sneaker3.png',
         brand: 'nike',
         title: 'Nike Air Force 1',
-        price: '$120',
+        price: '320',
     },
 
 
@@ -29,7 +29,7 @@ const sneakers = [
         image: 'sneaker4.png',
         brand: 'yeezy',
         title: 'Nike Air Force 1',
-        price: '$120',
+        price: '310',
     },
 
     {
@@ -37,7 +37,7 @@ const sneakers = [
         image: 'sneaker5.png',
         brand: 'adidas',
         title: 'Nike Air Force 1',
-        price: '$120',
+        price: '190',
     },
 
     {
@@ -45,7 +45,7 @@ const sneakers = [
         image: 'sneaker6.png',
         brand: 'jordan',
         title: 'Nike Air Force 1',
-        price: '$120',
+        price: '240',
     },
 
 
@@ -54,7 +54,7 @@ const sneakers = [
         image: 'sneaker13.png',
         brand: 'jordan',
         title: 'Nike Air Force 1',
-        price: '$120',
+        price: '270',
     },
 
     {
@@ -62,7 +62,7 @@ const sneakers = [
         image: 'sneaker14.png',
         brand: 'yeezy',
         title: 'Nike Air Force 1',
-        price: '$120',
+        price: '380',
     },
 
     {
@@ -70,7 +70,7 @@ const sneakers = [
         image: 'sneaker15.png',
         brand: 'yeezy',
         title: 'Nike Air Force 1',
-        price: '$120',
+        price: '360',
     },
 
     {
@@ -78,7 +78,7 @@ const sneakers = [
         image: 'sneaker8.png',
         brand: 'nike',
         title: 'Nike Air Force 1',
-        price: '$120',
+        price: '230',
     },
 
     {
@@ -86,7 +86,7 @@ const sneakers = [
         image: 'sneaker7.png',
         brand: 'yeezy',
         title: 'Nike Air Force 1',
-        price: '$120',
+        price: '210',
     },
 
    
@@ -96,28 +96,28 @@ const sneakers = [
         image: 'sneaker9.png',
         brand: 'jordan',
         title: 'Yeezy Air Force 1',
-        price: '$120',
+        price: '300',
     },
 
     {
         image: 'sneaker10.png',
         brand: 'yeezy',
         title: 'Nike Air Force 1',
-        price: '$120',
+        price: '180',
     },
 
     {
         image: 'sneaker11.png',
         brand: 'nike',
         title: 'Nike Air Force 1',
-        price: '$120',
+        price: '120',
     },
 
     {
         image: 'sneaker12.png',
         brand: 'adidas',
         title: 'Nike Air Force 1',
-        price: '$120',
+        price: '120',
     },
 
 
@@ -126,7 +126,7 @@ const sneakers = [
         image: 'sneaker16.png',
         brand: 'vans',
         title: 'Nike Air Force 1',
-        price: '$120',
+        price: '120',
     },
 
     {
@@ -134,7 +134,7 @@ const sneakers = [
         image: 'sneaker17.png',
         brand: 'jordan',
         title: 'Nike Air Force 1',
-        price: '$120',
+        price: '120',
     },
 
     {
@@ -142,7 +142,7 @@ const sneakers = [
         image: 'sneaker18.png',
         brand: 'nike',
         title: 'Nike Air Force 1',
-        price: '$120',
+        price: '120',
     },
 
     {
@@ -150,7 +150,7 @@ const sneakers = [
         image: 'sneaker19.png',
         brand: 'vans',
         title: 'Nike Air Force 1',
-        price: '$120',
+        price: '120',
     },
 
     {
@@ -158,7 +158,7 @@ const sneakers = [
         image: 'sneaker20.png',
         brand: 'nike',
         title: 'Nike Air Force 1',
-        price: '$120',
+        price: '120',
     },
 
     {
@@ -166,7 +166,7 @@ const sneakers = [
         image: 'sneaker21.png',
         brand: 'yeezy',
         title: 'Nike Air Force 1',
-        price: '$120',
+        price: '120',
     },
 
     {
@@ -174,7 +174,7 @@ const sneakers = [
         image: 'sneaker22.png',
         brand: 'adidas',
         title: 'Nike Air Force 1',
-        price: '$120',
+        price: '120',
     },
 
     {
@@ -182,7 +182,7 @@ const sneakers = [
         image: 'sneaker23.png',
         brand: 'jordan',
         title: 'Nike Air Force 1',
-        price: '$120',
+        price: '120',
     },
 
     {
@@ -190,7 +190,7 @@ const sneakers = [
         image: 'sneaker24.png',
         brand: 'nike',
         title: 'Nike Air Force 1',
-        price: '$120',
+        price: '120',
     },
 
     {
@@ -198,7 +198,7 @@ const sneakers = [
         image: 'sneaker25.png',
         brand: 'adidas',
         title: 'Nike Air Force 1',
-        price: '$120',
+        price: '120',
     },
 
     {
@@ -206,7 +206,7 @@ const sneakers = [
         image: 'sneaker26.png',
         brand: 'nike',
         title: 'Nike Air Force 1',
-        price: '$120',
+        price: '120',
     },
 
     {
@@ -214,28 +214,28 @@ const sneakers = [
         image: 'sneaker27.png',
         brand: 'yeezy',
         title: 'Yeezy Air Force 1',
-        price: '$120',
+        price: '120',
     },
 
     {
         image: 'sneaker28.png',
         brand: 'yeezy',
         title: 'Nike Air Force 1',
-        price: '$120',
+        price: '120',
     },
 
     {
         image: 'sneaker29.png',
         brand: 'nike',
         title: 'Nike Air Force 1',
-        price: '$120',
+        price: '120',
     },
 
     {
         image: 'sneaker30.png',
         brand: 'adidas',
         title: 'Nike Air Force 1',
-        price: '$120',
+        price: '120',
     },
 
 ];
@@ -301,6 +301,35 @@ const mediaFeedItems = [
         social: 'instagram',
     }
 ]
+const shoppingCartIcon = document.querySelector('.lni.lni-cart');
+const shoppingCart = document.querySelector('.shopping-cart');
+const shoppingCartContent = document.querySelector('.shopping-cart-content');
+
+shoppingCartIcon.addEventListener('click', function(){
+    shiftShoppingCart();
+    cover.style.display = 'block';
+})
+
+function shiftShoppingCart(){
+    shoppingCart.classList.add('active');
+}
+
+
+function updateCart(){
+    const cartInnerHTML = localStorage.getItem('innerHTML');
+    shoppingCartContent.innerHTML = cartInnerHTML;
+}
+
+setInterval(function(){
+    updateCart();
+}, 1000);
+
+const exitCartBtn = document.querySelector('.cart-title-exit i');
+
+exitCartBtn.addEventListener('click', function(){
+    shoppingCart.classList.remove('active');
+    cover.style.display = 'none';
+})
 
 //dynamically add html using js objects
 const bestSellerSneakersGrid = document.querySelector('.shop-section-grid');
@@ -470,18 +499,6 @@ window.addEventListener('scroll', function(){
 
 
 //access cart when clicked on icon
-const cartIcon = document.querySelector('.lni.lni-cart');
-cartIcon.addEventListener('click', function(){
-    if(cart.innerHTML === ''){
-       const cartAlertDiv = document.querySelector('.cart-alert-div');
-        cartAlertDiv.style.visibility = 'visible';
-       
-
-        setTimeout(function(){
-            cartAlertDiv.style.visibility = 'hidden';
-        }, 1000)
-    }   
-})
 
 
 

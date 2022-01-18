@@ -43,7 +43,9 @@ window.addEventListener('load', function(){
  //add item to cart
 const addToCartBtn = document.querySelector('.add-to-cart-btn');
 const shoppingCart = document.querySelector('.shopping-cart');
+const shoppingCartContent = document.querySelector('.shopping-cart-content');
 const cover = document.querySelector('.cover');
+const currentCartItems = [];
 
 addToCartBtn.addEventListener('click', function(e){
     //size is not selected
@@ -61,45 +63,58 @@ addToCartBtn.addEventListener('click', function(e){
         //get selected sneaker elements
         const cartImg = e.target.parentElement.previousElementSibling.children[0].src;
         const cartTitle = e.target.parentElement.children[1].textContent;
+        const cartPrice = e.target.parentElement.children[2].textContent;
+        const cartSize = e.target.parentElement.children[3].children[0].children[0].textContent;
        
-
+        
+       
         const cartItem = document.createElement('div');
         cartItem.classList.add('cart-item');
 
-        cartItem.innerHTML = `<div class="cart-img-container">
-        <img src="${cartImg}">
-    </div>
+        cartItem.innerHTML = `
+        <div class="cart-img-container">
+            <img src="${cartImg}">
+        </div>
 
-    <div class="cart-info">
-        <h3 class="cart-title">${cartTitle}</h3>
-        <p class="cart-size">11.5</p>
-    </div>
+        <div class="cart-info">
+            <h3 class="cart-title">${cartTitle}</h3>
+            <p class="cart-size">${cartSize}</p>
+        </div>
 
-    <div class="exit-price">
-         <i class="lni lni-close"></i>
-         <p>$120.99</p>
-    </div>`;
+        <div class="exit-price">
+            <i class="lni lni-close"></i>
+         <p>${cartPrice}</p>
+        </div>`;
 
-    shoppingCart.appendChild(cartItem);
+        
+        console.log(cartItem);
+        shoppingCartContent.appendChild(cartItem);
+        console.log(shoppingCartContent);
+
     
-    
+        const innerHTML = shoppingCartContent.innerHTML;
+
+
+        localStorage.setItem('innerHTML', innerHTML);
+        
+      
+        updateCart();
+
+
     //remove item from cart
-    const removeBtns = cartItem.querySelectorAll('i');
-    removeBtns.forEach(function(removeBtn){
-        removeBtn.addEventListener('click', function(e){
-            e.target.parentElement.parentElement.remove();
-        })
-    })
-
-
-
-
-    }
-
-
   
+    }
 })
 
+
+function updateCart(){
+    const cartInnerHTML = localStorage.getItem('innerHTML');
+    shoppingCartContent.innerHTML = cartInnerHTML;
+}
+
+setInterval(function(){
+    updateCart();
+}, 1000);
 
 function shiftShoppingCart(){
     shoppingCart.classList.add('active');
