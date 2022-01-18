@@ -322,7 +322,7 @@ function updateCart(){
 
 setInterval(function(){
     updateCart();
-}, 100);
+}, 1000);
 
 const exitCartBtn = document.querySelector('.cart-title-exit i');
 
